@@ -6,6 +6,7 @@ __pycache__/
 venv/
 env/
 *.pkl
+*.db
 
 # Node
 node_modules/

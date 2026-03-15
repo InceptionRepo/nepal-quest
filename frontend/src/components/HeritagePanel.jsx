@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Star, AlertTriangle, Clock, Award, Users, Heart, MapPin } from 'lucide-react';
+import { X, Star, AlertTriangle, Clock, Award, Users, Heart, MapPin, Sparkles, Camera } from 'lucide-react';
 
 export default function HeritagePanel({ site, onClose }) {
   if (!site) return null;
@@ -67,6 +67,29 @@ export default function HeritagePanel({ site, onClose }) {
         )}
 
         {/* Story */}
+        {/* AI-Generated Narrative */}
+        {site.ai_story && (
+          <div className="bg-gradient-to-br from-purple-500/5 to-indigo-500/5 border border-purple-500/20 rounded-lg p-3">
+            <div className="flex items-center gap-2 mb-1.5">
+              <Sparkles className="w-4 h-4 text-purple-400" />
+              <h3 className="text-xs font-semibold text-purple-300 uppercase">AI-Powered Narrative</h3>
+            </div>
+            {site.ai_story.ai_narrative && (
+              <p className="text-xs text-gray-300 leading-relaxed mb-2">{site.ai_story.ai_narrative}</p>
+            )}
+            {site.ai_story.hidden_insight && (
+              <p className="text-xs text-amber-300/80 leading-relaxed"><span className="font-semibold">Hidden insight:</span> {site.ai_story.hidden_insight}</p>
+            )}
+            {site.ai_story.best_photo_spot && (
+              <p className="text-xs text-cyan-300/80 leading-relaxed mt-1 flex items-start gap-1">
+                <Camera className="w-3 h-3 mt-0.5 flex-shrink-0" />
+                <span><span className="font-semibold">Best photo spot:</span> {site.ai_story.best_photo_spot}</span>
+              </p>
+            )}
+          </div>
+        )}
+
+        {/* Cultural Story */}
         {site.story && (
           <div>
             <h3 className="text-xs font-semibold text-gray-500 uppercase mb-2">Cultural Story</h3>

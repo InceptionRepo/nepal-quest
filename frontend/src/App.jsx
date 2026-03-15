@@ -26,7 +26,11 @@ export default function App() {
       setView('dashboard');
     } catch (err) {
       console.error('Failed to fetch itinerary:', err);
-      alert('Failed to generate itinerary. Please make sure the backend is running on port 5000.');
+      if (err.response && err.response.status === 429) {
+        alert('Rate limit reached. Please wait a moment and try again.');
+      } else {
+        alert('Failed to generate itinerary. Please make sure the backend is running on port 5000.');
+      }
     } finally {
       setLoading(false);
     }
@@ -46,11 +50,15 @@ export default function App() {
 
   const handleHeritageClick = async (siteId) => {
     try {
-      const res = await axios.get(`/api/heritage/${siteId}`);
+      const interests = userProfile?.interests?.join(',') || '';
+      const res = await axios.get(`/api/heritage/${siteId}?interests=${interests}`);
       setHeritageSite(res.data);
       setShowHeritage(true);
     } catch (err) {
       console.error('Failed to fetch heritage site:', err);
+      if (err.response && err.response.status === 429) {
+        alert('Rate limit reached. Please wait a moment and try again.');
+      }
     }
   };
 
@@ -59,25 +67,48 @@ export default function App() {
     setHeritageSite(null);
   };
 
-  const handleLogoClick = () => {
-    setView('landing');
+  const handleNavigate = (target) => {
+    if (target === 'landing') {
+      setView('landing');
+    } else if (target === 'onboarding') {
+      setView('onboarding');
+    } else if (target === 'dashboard') {
+      if (itineraryData) {
+        setShowHeritage(false);
+        setView('dashboard');
+      } else {
+        setView('onboarding');
+      }
+    } else if (target === 'heritage') {
+      if (itineraryData) {
+        setView('dashboard');
+        handleHeritageClick('PSP');
+      } else {
+        setView('onboarding');
+      }
+    }
   };
 
-  // Landing page with HeroSection
+  const navProps = {
+    onLogoClick: () => setView('landing'),
+    currentView: view,
+    onNavigate: handleNavigate,
+  };
+
+  // Landing page
   if (view === 'landing') {
     return (
       <div className="min-h-screen bg-gray-950 flex flex-col">
-        <Navbar onLogoClick={handleLogoClick} />
+        <Navbar {...navProps} />
         <HeroSection
-          title="Nepal Quest"
+          title="Powered by GPT-5.4 + ML"
           subtitle={{
             regular: 'Plan your journey through ',
             gradient: 'the Himalayas and beyond',
           }}
-          description="AI-powered travel intelligence for Nepal. Build a personalized itinerary, explore cultural heritage, and discover crowd-free destinations with real-time heatmaps."
+          description="AI-powered travel intelligence for Nepal. GPT-5.4 generates personalized itineraries, Random Forest ML predicts crowd levels, and AI storytelling brings heritage sites to life."
           ctaText="Start Planning"
           onCtaClick={() => setView('onboarding')}
-          bottomImage="https://images.unsplash.com/photo-1544735716-5b136d1f61f0?auto=format&fit=crop&w=2400&q=80"
           gridOptions={{
             angle: 65,
             opacity: 0.4,
@@ -92,17 +123,17 @@ export default function App() {
             {[
               {
                 title: 'AI Itinerary Engine',
-                desc: 'Random Forest ML model analyzes your preferences to generate the perfect day-by-day Nepal itinerary.',
+                desc: 'Rule-based scoring + Random Forest classifier selects destinations, then GPT-5.4 generates personalized trip summaries and insider tips.',
                 accent: 'from-purple-500 to-pink-500',
               },
               {
-                title: 'Crowd Heatmap',
-                desc: 'Predict crowd density at any destination for any month. Color-coded interactive map of all Nepal.',
+                title: 'Crowd Heatmap + AI Advice',
+                desc: 'Random Forest regressor predicts crowd density. GPT-5.4 generates smart crowd-avoidance advice for each destination and month.',
                 accent: 'from-green-400 to-cyan-400',
               },
               {
-                title: 'Heritage Storyteller',
-                desc: 'Deep cultural stories, etiquette tips, and local secrets for UNESCO World Heritage Sites.',
+                title: 'AI Heritage Storyteller',
+                desc: 'GPT-5.4 creates personalized cultural narratives, hidden insights, and best photo spots for UNESCO World Heritage Sites.',
                 accent: 'from-amber-400 to-orange-400',
               },
             ].map((card) => (
@@ -122,7 +153,7 @@ export default function App() {
   if (view === 'onboarding') {
     return (
       <div className="min-h-screen bg-gray-950 flex flex-col">
-        <Navbar onLogoClick={handleLogoClick} />
+        <Navbar {...navProps} />
         <OnboardingForm onSubmit={handleFormSubmit} loading={loading} />
       </div>
     );
@@ -132,11 +163,12 @@ export default function App() {
   if (view === 'dashboard' && loading) {
     return (
       <div className="min-h-screen bg-gray-950 flex flex-col">
-        <Navbar onLogoClick={handleLogoClick} />
+        <Navbar {...navProps} />
         <div className="flex-1 flex items-center justify-center">
           <div className="text-center">
             <div className="spinner mx-auto mb-4" />
-            <p className="text-gray-400 font-medium">Generating your perfect Nepal itinerary...</p>
+            <p className="text-gray-400 font-medium">AI is generating your personalized Nepal itinerary...</p>
+            <p className="text-gray-600 text-sm mt-1">GPT-5.4 + Random Forest working together</p>
           </div>
         </div>
       </div>
@@ -146,7 +178,7 @@ export default function App() {
   // Dashboard
   return (
     <div className="h-screen flex flex-col bg-gray-950">
-      <Navbar onLogoClick={handleLogoClick} />
+      <Navbar {...navProps} />
       <div className="flex-1 flex overflow-hidden">
         {/* Map — left 60% */}
         <div className="w-[60%] h-full border-r border-white/5">
@@ -169,6 +201,9 @@ export default function App() {
               confidence={itineraryData?.confidence_score}
               destinations={itineraryData?.destinations_used}
               highlights={itineraryData?.highlights}
+              aiSummary={itineraryData?.ai_summary}
+              aiTips={itineraryData?.ai_tips}
+              aiEnhanced={itineraryData?.ai_enhanced}
               onRegenerate={handleRegenerate}
               loading={loading}
             />

@@ -1,10 +1,13 @@
 import json
 import os
+import hashlib
 import numpy as np
 import joblib
+from engines.ai_client import ai_generate
+from engines.database import get_cached_ai_response, set_cached_ai_response
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
-MODELS_DIR = os.path.join(os.path.dirname(__file__), "..", "models")
+DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
+MODELS_DIR = os.path.join(os.path.dirname(__file__), '..', 'models')
 
 MONTH_NAMES = [
     "Jan",
@@ -164,3 +167,37 @@ def get_crowd_single(dest_id, month_num):
         "recommendation": recommendation,
         "monthly_trend": monthly_trend,
     }
+
+
+def get_ai_crowd_advice(dest_id, month_num):
+    """Use GPT to generate smart crowd-avoidance advice for a destination."""
+    dest = destinations_by_id.get(dest_id)
+    if dest is None:
+        return None
+
+    month_name = MONTH_NAMES[month_num - 1]
+    score = predict_crowd_score(dest, month_num)
+    label, _ = get_crowd_label(score)
+
+    # Find quietest months
+    all_scores = [(MONTH_NAMES[i], predict_crowd_score(dest, i + 1)) for i in range(12)]
+    quietest = sorted(all_scores, key=lambda x: x[1])[:3]
+    quietest_str = ', '.join([f"{m} (score {s})" for m, s in quietest])
+
+    cache_key = hashlib.md5(f"crowd:{dest_id}:{month_num}".encode()).hexdigest()
+    cached = get_cached_ai_response(cache_key)
+    if cached:
+        return cached
+
+    system_prompt = "You are a Nepal travel crowd advisor. Give 2-3 concise sentences of practical advice. Be specific about timing, alternative spots, and local tips."
+
+    user_prompt = f"""{dest['name']} in {month_name}: crowd score {score}/10 ({label}).
+Altitude: {dest['altitude_m']}m. Type: {dest['type']}. Region: {dest['region']}.
+Quietest months: {quietest_str}.
+Give practical crowd-avoidance advice for visiting this month."""
+
+    advice = ai_generate(system_prompt, user_prompt, max_tokens=200, temperature=0.6)
+    if advice:
+        set_cached_ai_response(cache_key, advice)
+        return advice
+    return None

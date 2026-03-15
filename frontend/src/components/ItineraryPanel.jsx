@@ -1,9 +1,9 @@
 import React from 'react';
-import { Clock, Bus, DollarSign, RefreshCw, Loader2, Star, Sunrise, Sun, Moon } from 'lucide-react';
+import { Bus, DollarSign, RefreshCw, Loader2, Star, Sunrise, Sun, Moon, Sparkles, Lightbulb } from 'lucide-react';
 
 const NPR_RATE = 133;
 
-export default function ItineraryPanel({ itinerary, totalCost, confidence, destinations, highlights, onRegenerate, loading }) {
+export default function ItineraryPanel({ itinerary, totalCost, confidence, destinations, highlights, aiSummary, aiTips, aiEnhanced, onRegenerate, loading }) {
   if (!itinerary || itinerary.length === 0) {
     return (
       <div className="h-full flex items-center justify-center p-6 bg-gray-950">
@@ -48,6 +48,27 @@ export default function ItineraryPanel({ itinerary, totalCost, confidence, desti
           )}
         </div>
       </div>
+
+      {/* AI Summary Section */}
+      {aiEnhanced && aiSummary && (
+        <div className="mx-4 mt-3 p-3 bg-purple-500/5 border border-purple-500/20 rounded-xl">
+          <div className="flex items-center gap-2 mb-1.5">
+            <Sparkles className="w-4 h-4 text-purple-400" />
+            <span className="text-xs font-semibold text-purple-300 uppercase">AI-Powered Insight</span>
+          </div>
+          <p className="text-xs text-gray-300 leading-relaxed">{aiSummary}</p>
+          {aiTips && aiTips.length > 0 && (
+            <div className="mt-2 pt-2 border-t border-purple-500/10 space-y-1.5">
+              {aiTips.map((tip, i) => (
+                <div key={i} className="flex items-start gap-1.5">
+                  <Lightbulb className="w-3 h-3 text-amber-400 mt-0.5 flex-shrink-0" />
+                  <p className="text-xs text-gray-400 leading-relaxed">{tip}</p>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Day cards */}
       <div className="flex-1 overflow-y-auto p-4 space-y-3">
