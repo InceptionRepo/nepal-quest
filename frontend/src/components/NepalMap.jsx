@@ -8,6 +8,12 @@ const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
 const NEPAL_CENTER = [28.3949, 84.1240];
 const ZOOM = 7;
 
+// Nepal bounding box — constrains the map to Nepal only
+const NEPAL_BOUNDS = [
+  [26.347, 80.058],  // southwest corner
+  [30.447, 88.201],  // northeast corner
+];
+
 const LEGEND = [
   { label: 'Quiet', color: '#22c55e' },
   { label: 'Moderate', color: '#f59e0b' },
@@ -112,7 +118,16 @@ export default function NepalMap({ onHeritageClick, selectedMonth, onMonthChange
 
       {/* Map */}
       <div className="flex-1 relative">
-        <MapContainer center={NEPAL_CENTER} zoom={ZOOM} className="w-full h-full" scrollWheelZoom={true}>
+        <MapContainer
+          center={NEPAL_CENTER}
+          zoom={ZOOM}
+          minZoom={7}
+          maxZoom={13}
+          maxBounds={NEPAL_BOUNDS}
+          maxBoundsViscosity={1.0}
+          className="w-full h-full"
+          scrollWheelZoom={true}
+        >
           <MapResizer />
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -138,13 +153,14 @@ export default function NepalMap({ onHeritageClick, selectedMonth, onMonthChange
                 eventHandlers={{ click: () => handleMarkerClick(dest) }}
               >
                 <Popup>
-                  <div className="text-sm min-w-[180px]">
+                  <div className="text-sm min-w-[200px] max-w-[260px]">
                     <p className="font-bold text-white text-base mb-1">{dest.name}</p>
                     <p>
                       <span className="inline-block px-2 py-0.5 rounded text-xs font-semibold text-white mr-1" style={{ backgroundColor: dest.color }}>{dest.crowd_label}</span>
                       <span className="text-gray-400 text-xs">Score: {typeof dest.crowd_score === 'number' ? dest.crowd_score.toFixed(1) : dest.crowd_score}</span>
                     </p>
                     <p className="text-xs text-gray-400 mt-1 capitalize">Type: {dest.type}</p>
+                    {dest.description && <p className="text-xs text-gray-300 mt-1.5 leading-relaxed line-clamp-3">{dest.description}</p>}
                     {dest.hidden_gem && <p className="text-xs text-purple-400 font-semibold mt-1">Hidden Gem</p>}
                   </div>
                 </Popup>

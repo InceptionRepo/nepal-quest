@@ -10,7 +10,13 @@
     "difficulty": "Hard",
     "min_days": 12,
     "avg_cost_usd": 1500,
-    "description": "The legendary trek to the foot of the world's highest peak. Journey through Sherpa villages, ancient monasteries, and breathtaking Himalayan landscapes to reach Everest Base Camp at 5,364 meters.",
+    "description": "The legendary trek to the foot of the world's highest peak through Sherpa villages, ancient monasteries, and breathtaking Himalayan landscapes to 5,364m.",
+    "interest_descriptions": {
+      "trekking": "The ultimate Himalayan trek — 12 days through Namche Bazaar, Tengboche, Dingboche, up to Gorak Shep and Kala Patthar (5,545m). Challenging high-altitude terrain with iconic suspension bridges and glacier moraines.",
+      "adventure": "Land at Lukla's cliff-edge runway, cross swaying suspension bridges over roaring rivers, summit Kala Patthar at dawn, and stand on the Khumbu Glacier where legendary expeditions begin.",
+      "spiritual": "Pass through Tengboche Monastery for evening chanting, spin prayer wheels in Namche, and receive blessings from Sherpa lamas. The Khumbu is deeply Buddhist — mani walls and chortens line every trail.",
+      "food": "Taste authentic Sherpa stew (thukpa) and yak cheese in teahouses. Try Namche Bazaar's famous apple pie, Sherpa bread with yak butter tea, and celebrate at EBC with a dal bhat feast."
+    },
     "best_months": ["Mar", "Apr", "May", "Oct", "Nov"],
     "tags": ["trekking", "adventure", "spiritual"],
     "hidden_gem": false,
@@ -31,7 +37,13 @@
     "difficulty": "Easy",
     "min_days": 3,
     "avg_cost_usd": 250,
-    "description": "Nepal's adventure capital nestled beside the tranquil Phewa Lake with stunning views of the Annapurna range. Enjoy paragliding, boating, and vibrant lakeside cafes.",
+    "description": "Nepal's adventure capital beside tranquil Phewa Lake with stunning Annapurna views, paragliding, boating, and vibrant lakeside cafes.",
+    "interest_descriptions": {
+      "adventure": "Paraglide above Phewa Lake from Sarangkot, zip-line 1.8km across the valley, bungee jump, ultralight flights over the Annapurna range, and white-water raft on the Seti River.",
+      "food": "Lakeside is a food paradise — wood-fired pizza at Busy Bee, fresh lake trout grilled at Moondance, authentic Thakali thali at Bhat Bhateni, momos at Pokhara Momo Center, and sunrise coffee at rooftop cafes facing Machhapuchhre.",
+      "trekking": "Gateway to Annapurna Circuit, Poon Hill trek, Mardi Himal, and ABC. Sarangkot sunrise hike (1.5 hrs) gives a panoramic preview. The 4-day Poon Hill trek starts from nearby Nayapul.",
+      "relaxation": "Rowboat across Phewa Lake at golden hour, yoga sessions at lakeside studios, massage spas, and quiet sunset walks along the dam. The perfect wind-down after trekking."
+    },
     "best_months": ["Feb", "Mar", "Apr", "Oct", "Nov", "Dec"],
     "tags": ["adventure", "relaxation", "food", "trekking"],
     "hidden_gem": false,
@@ -52,7 +64,13 @@
     "difficulty": "Easy",
     "min_days": 2,
     "avg_cost_usd": 150,
-    "description": "The cultural heart of Nepal with seven UNESCO World Heritage Sites. Explore ancient temples, bustling markets, and centuries of Newari architecture in this vibrant capital valley.",
+    "description": "The cultural heart of Nepal with seven UNESCO World Heritage Sites, ancient temples, bustling markets, and centuries of Newari architecture.",
+    "interest_descriptions": {
+      "heritage": "Seven UNESCO sites in one valley — Kathmandu Durbar Square, Patan Durbar Square, Bhaktapur Durbar Square, Pashupatinath, Boudhanath, Swayambhunath, and Changu Narayan. Each has distinct Newari craftsmanship spanning 2,000 years.",
+      "food": "The Newari food capital — try chatamari (rice crepe 'Nepali pizza') in Kirtipur, juju dhau (king curd) in Bhaktapur, yomari dumplings in Patan, bara (lentil pancake) at Asan, choila (spiced buffalo) in Newa restaurants in Patan. Street food tour through Indra Chowk and Ason markets is unforgettable.",
+      "spiritual": "Morning aarti at Pashupatinath, kora walk at Boudhanath with hundreds of monks, meditation at Kopan Monastery, and the living goddess Kumari at Kathmandu Durbar Square.",
+      "hidden_gems": "Skip the main squares and discover Itum Bahal's hidden courtyard monastery, the Garden of Dreams, Panauti's untouched medieval town 30km away, and the secret Newari feast restaurants in Kirtipur."
+    },
     "best_months": ["Feb", "Mar", "Apr", "Oct", "Nov", "Dec"],
     "tags": ["heritage", "spiritual", "food", "hidden_gems"],
     "hidden_gem": false,
@@ -73,9 +91,15 @@
     "difficulty": "Easy",
     "min_days": 3,
     "avg_cost_usd": 200,
-    "description": "Nepal's premier wildlife sanctuary and UNESCO World Heritage Site. Home to one-horned rhinos, Bengal tigers, and over 500 species of birds in lush subtropical jungles.",
+    "description": "Nepal's premier wildlife sanctuary — home to one-horned rhinos, Bengal tigers, gharial crocodiles, and 500+ bird species in subtropical jungle.",
+    "interest_descriptions": {
+      "wildlife": "Jeep safaris to spot one-horned rhinos (practically guaranteed), Bengal tiger tracking on foot with expert guides, gharial crocodile spotting on the Rapti River, and dawn birdwatching for hornbills, kingfishers, and Bengal floricans.",
+      "adventure": "Jungle walks with armed guides through tiger territory, dugout canoe rides down the Rapti, elephant bathing in the river, and night safaris to spot sloth bears and leopards.",
+      "food": "Tharu community homestay meals with farm-fresh curry, river fish tarkari, and wild boar dishes. Try local Tharu rice wine (jaand) and dhikri (steamed rice dumpling) at village cooking demonstrations.",
+      "relaxation": "Stay at a jungle lodge overlooking the Rapti River. Morning yoga, afternoon birdwatching from your veranda, sunset river walks, and Tharu cultural dance performances."
+    },
     "best_months": ["Jan", "Feb", "Mar", "Apr", "Oct", "Nov", "Dec"],
-    "tags": ["wildlife", "adventure", "relaxation"],
+    "tags": ["wildlife", "adventure", "relaxation", "food"],
     "hidden_gem": false,
     "crowd_score": {
       "Jan": 5, "Feb": 6, "Mar": 7, "Apr": 7, "May": 4,
@@ -94,9 +118,15 @@
     "difficulty": "Easy",
     "min_days": 2,
     "avg_cost_usd": 100,
-    "description": "The birthplace of Lord Buddha and a UNESCO World Heritage Site. Visit the sacred Maya Devi Temple, Ashoka Pillar, and monasteries built by Buddhist nations from around the world.",
+    "description": "The birthplace of Lord Buddha — UNESCO World Heritage Site with the Maya Devi Temple, Ashoka Pillar, and monasteries from Buddhist nations worldwide.",
+    "interest_descriptions": {
+      "spiritual": "Walk the exact ground where Siddhartha Gautama was born in 563 BCE. Meditate at Maya Devi Temple, see Ashoka's 249 BCE pillar, join monks for dawn chanting, and sit at the eternal peace flame during full moon.",
+      "heritage": "Ashoka Pillar — one of the oldest historical markers in South Asia. Maya Devi's nativity ruins date to 3rd century BCE. Monasteries from 25+ nations showcase global Buddhist architecture from Myanmar's golden temples to Japan's minimalist gardens.",
+      "relaxation": "Cycle the 6km canal path between monasteries at dawn when the gardens are misty. Sit in the Japanese Peace Garden, walk barefoot through the sacred garden, and spend an afternoon in quiet contemplation.",
+      "food": "Simple but authentic Terai cuisine — dhido with gundruk, fresh mango lassi from roadside stalls, Tharu fish curry, and monastery vegetarian meals. The Myanmar monastery sometimes serves traditional Burmese tea leaf salad."
+    },
     "best_months": ["Jan", "Feb", "Mar", "Oct", "Nov", "Dec"],
-    "tags": ["spiritual", "heritage"],
+    "tags": ["spiritual", "heritage", "relaxation"],
     "hidden_gem": false,
     "crowd_score": {
       "Jan": 4, "Feb": 5, "Mar": 6, "Apr": 6, "May": 5,
@@ -115,7 +145,13 @@
     "difficulty": "Moderate",
     "min_days": 5,
     "avg_cost_usd": 600,
-    "description": "Nepal's largest and most pristine lake, hidden in the remote northwest. Crystal-clear turquoise waters surrounded by pine and juniper forests with almost no tourists — a true wilderness paradise.",
+    "description": "Nepal's largest and most pristine lake in the remote northwest — crystal-clear turquoise waters surrounded by pine forests with almost no tourists.",
+    "interest_descriptions": {
+      "hidden_gems": "Nepal's best-kept secret — a turquoise alpine lake with zero crowds, surrounded by virgin forest. You might be the only tourist there. Fly to Talcha, trek 2 days through Thakuri villages to reach paradise.",
+      "trekking": "Moderate 4-5 day trek from Talcha through blue pine and juniper forests. The 14km lakeshore circumnavigation trail passes the Rara Devi temple and Magar settlements with panoramic mountain views.",
+      "wildlife": "Spot the Himalayan monal (Nepal's national bird Danphe), red pandas in the surrounding forest, whooper swans on the lake, and Himalayan black bears in autumn.",
+      "relaxation": "Camp on the pristine lakeshore, watch sunsets paint the water gold, and experience total silence — no traffic, no crowds, just birdsong and wind through the pines."
+    },
     "best_months": ["Apr", "May", "Sep", "Oct", "Nov"],
     "tags": ["hidden_gems", "trekking", "relaxation", "wildlife"],
     "hidden_gem": true,
@@ -136,7 +172,13 @@
     "difficulty": "Moderate",
     "min_days": 8,
     "avg_cost_usd": 1200,
-    "description": "The forbidden kingdom of Lo, a remote desert landscape resembling Tibet. Ancient cave monasteries, red-walled Lo Manthang city, and a living Tibetan Buddhist culture untouched by modernization.",
+    "description": "The forbidden kingdom of Lo — a remote Tibetan desert with ancient cave monasteries, the walled city of Lo Manthang, and living Buddhist culture.",
+    "interest_descriptions": {
+      "heritage": "The walled capital Lo Manthang has 15th-century frescoes in Thubchen Gompa, a massive clay Buddha in Jampa Gompa, and the Raja's palace. Sky caves at Chhoser were ancient cliff dwellings. The 500m Ghami mani wall is Nepal's longest.",
+      "hidden_gems": "Restricted area permit needed — feels like stepping into medieval Tibet. Red cliffs of Dhakmar colored by 'demon blood,' cave paintings predating Buddhism, and a kingdom that was closed to outsiders until 1992.",
+      "trekking": "8-10 day trek through the deepest gorge on Earth between Dhaulagiri and Annapurna. Desert landscapes shift from green valleys to Mars-like red and grey terrain as you climb north.",
+      "spiritual": "Active Tibetan Buddhist monasteries where monks perform daily rituals unchanged for centuries. Kagbeni's 500-year-old monastery perches on a cliff. The Tiji festival (May) features masked dances to drive out evil."
+    },
     "best_months": ["Mar", "Apr", "May", "Jun", "Sep", "Oct"],
     "tags": ["heritage", "hidden_gems", "trekking", "spiritual"],
     "hidden_gem": true,
@@ -157,7 +199,13 @@
     "difficulty": "Easy",
     "min_days": 2,
     "avg_cost_usd": 80,
-    "description": "A beautifully preserved hilltop Newari trading town frozen in time. Car-free cobbled streets, panoramic Himalayan views, mysterious Siddha Gufa cave, and warm hospitality make this a perfect hidden stop.",
+    "description": "A beautifully preserved hilltop Newari trading town frozen in time — car-free cobbled streets, panoramic Himalayan views, and warm hospitality.",
+    "interest_descriptions": {
+      "heritage": "A perfectly preserved 18th-century Newari bazaar town on a ridge. Original trading houses with carved wooden windows line the main street. Bindabasini Temple and Thani Mai shrine anchor the town's spiritual identity.",
+      "hidden_gems": "Between Kathmandu and Pokhara but missed by 99% of tourists. Car-free main street at 1,030m with Himalayan panorama. Siddha Gufa — Nepal's largest cave — is a 30-minute walk down. The sunset from Tundikhel meadow rivals any in Nepal.",
+      "food": "Home-cooked Newari meals at family-run guesthouses — try aila (local rice wine), chatamari, and fresh local honey. The hilltop cafes serve the best aalu tama (potato and bamboo shoot curry) in the region.",
+      "relaxation": "No cars, no horns, no hustle. Walk the ancient bazaar at dawn, sit in a rooftop cafe with 180-degree Himalayan views, and feel time stop. Perfect overnight break on the Kathmandu-Pokhara journey."
+    },
     "best_months": ["Feb", "Mar", "Apr", "Oct", "Nov", "Dec"],
     "tags": ["heritage", "hidden_gems", "relaxation", "food"],
     "hidden_gem": true,
@@ -178,7 +226,13 @@
     "difficulty": "Easy",
     "min_days": 3,
     "avg_cost_usd": 120,
-    "description": "Rolling emerald tea estates in Nepal's far east, reminiscent of Darjeeling. Sunrise over Kanchenjunga, fresh orthodox tea plucking, and the serene Mai Pokhari sacred lake await the adventurous traveler.",
+    "description": "Rolling emerald tea estates in Nepal's far east — sunrise over Kanchenjunga, fresh tea plucking, and the serene Mai Pokhari sacred lake.",
+    "interest_descriptions": {
+      "food": "Visit Kanyam and Ilam tea factories for fresh orthodox tea tasting and plucking. Try churpi (dried yak cheese) and tongba (fermented millet drink) at local Limbu eateries. Buy first-flush Nepali tea directly from estates at a fraction of Darjeeling prices.",
+      "hidden_gems": "Nepal's answer to Darjeeling without the crowds. Terraced tea gardens cascade down hillsides, Kanchenjunga glows at sunrise, and the Mai Pokhari Ramsar wetland is a sacred lake surrounded by moss-draped forest.",
+      "relaxation": "Sip freshly brewed tea overlooking carpeted green hills, walk through foggy tea estates at dawn, and stay at a tea garden homestay. The pace of life here is beautifully slow.",
+      "wildlife": "Mai Pokhari's cloud forest harbors red pandas, Himalayan salamanders, and rare orchids. Birdwatching in the Singalila ridge forests can yield sightings of fire-tailed myzornis and satyr tragopan."
+    },
     "best_months": ["Mar", "Apr", "May", "Oct", "Nov"],
     "tags": ["hidden_gems", "relaxation", "food", "wildlife"],
     "hidden_gem": true,
@@ -199,14 +253,425 @@
     "difficulty": "Hard",
     "min_days": 10,
     "avg_cost_usd": 900,
-    "description": "One of the world's greatest trekking routes, circling the Annapurna massif through rice paddies, rhododendron forests, high desert, and over the legendary Thorong La pass at 5,416 meters.",
+    "description": "One of the world's greatest treks — circling the Annapurna massif through rice paddies, rhododendron forests, high desert, and over Thorong La (5,416m).",
+    "interest_descriptions": {
+      "trekking": "The classic 10-14 day circuit crosses five climate zones — subtropical jungle, terraced farmland, alpine meadows, arid Tibetan plateau, and the legendary Thorong La pass at 5,416m. Each day brings a dramatically different landscape.",
+      "adventure": "Cross Thorong La in pre-dawn darkness, mountain bike through Manang Valley, walk the world's deepest gorge between Dhaulagiri and Annapurna, and brave the wind tunnel of the Kali Gandaki.",
+      "food": "The Annapurna region has Nepal's best teahouse food — Thakali set meals in Marpha (dal bhat, gundruk, apple chutney), apple pie and cinnamon rolls in Manang bakeries, and Marpha apple brandy distilled right in the village.",
+      "spiritual": "Muktinath Temple at 3,710m is sacred to both Hindus and Buddhists — 108 water spouts and eternal natural gas flames. Braga Monastery (500 years old) has an eerie room of 108 clay Buddha statues."
+    },
     "best_months": ["Mar", "Apr", "Oct", "Nov"],
-    "tags": ["trekking", "adventure", "spiritual"],
+    "tags": ["trekking", "adventure", "spiritual", "food"],
     "hidden_gem": false,
     "crowd_score": {
       "Jan": 2, "Feb": 3, "Mar": 6, "Apr": 7, "May": 5,
       "Jun": 2, "Jul": 1, "Aug": 1, "Sep": 4, "Oct": 9,
       "Nov": 7, "Dec": 3
+    }
+  },
+  {
+    "id": "BKT",
+    "name": "Bhaktapur",
+    "region": "Bagmati",
+    "type": "heritage",
+    "lat": 27.6710,
+    "lng": 85.4298,
+    "altitude_m": 1401,
+    "difficulty": "Easy",
+    "min_days": 1,
+    "avg_cost_usd": 60,
+    "description": "The best-preserved medieval city in Nepal — Newari art capital with Nyatapola Temple, Pottery Square, and the finest juju dhau (king curd) in the country.",
+    "interest_descriptions": {
+      "heritage": "The 55-Window Palace, Nyatapola Temple (tallest pagoda in Nepal), Dattatreya Square, and Pottery Square where artisans throw clay using techniques unchanged for centuries. More authentic than Kathmandu — this was the cultural capital of the Malla kings.",
+      "food": "The must-eat destination in Nepal — Bhaktapur's juju dhau (king curd) served in clay pots is legendary. Also try chatamari at Cafe Nyatapola, yomari dumplings (seasonal in December), and local bara (lentil fritters) at Sukuldhoka. Silu (Newari meat soup) at traditional bhattis.",
+      "hidden_gems": "Most tourists only visit Durbar Square — walk 10 minutes south to Dattatreya Square where Peacock Window is Nepal's most famous carved window. Pottery Square has zero crowds early morning. The Surya Binayak forest temple above town has stunning valley views.",
+      "spiritual": "Active Newari worship at Nyatapola — five-tiered temple with Tantric guardians. Dattatreya Temple blends Hindu and Buddhist elements. The Bisket Jatra festival (April) is the most spectacular in Nepal with a massive chariot parade."
+    },
+    "best_months": ["Feb", "Mar", "Apr", "Oct", "Nov", "Dec"],
+    "tags": ["heritage", "food", "hidden_gems", "spiritual"],
+    "hidden_gem": false,
+    "crowd_score": {
+      "Jan": 3, "Feb": 5, "Mar": 6, "Apr": 7, "May": 5,
+      "Jun": 3, "Jul": 2, "Aug": 2, "Sep": 4, "Oct": 8,
+      "Nov": 7, "Dec": 4
+    }
+  },
+  {
+    "id": "KRT",
+    "name": "Kirtipur",
+    "region": "Bagmati",
+    "type": "heritage",
+    "lat": 27.6784,
+    "lng": 85.2784,
+    "altitude_m": 1395,
+    "difficulty": "Easy",
+    "min_days": 1,
+    "avg_cost_usd": 30,
+    "description": "Ancient hilltop Newari fortress town — the food capital of the Kathmandu Valley with the best chatamari, choila, and samay baji restaurants.",
+    "interest_descriptions": {
+      "food": "THE food destination in Kathmandu Valley. Newa Lahana restaurant for the full samay baji feast (beaten rice, marinated buffalo, soybeans, egg, aachar). Chatamari (Newari rice crepe) shops on every corner. Famous choila (spiced grilled meat) and aila (rice spirit). Locals drive here specifically to eat.",
+      "heritage": "One of the oldest cities in the Valley — resisted the Gorkha conquest in 1767 and Prithvi Narayan Shah famously cut off the townspeople's noses. Chilancho Stupa (Buddhist) and Bagh Bhairav Temple (Hindu) sit side by side, showing the town's religious harmony.",
+      "hidden_gems": "Just 5km from Kathmandu but feels like a different century. No tourist infrastructure — you eat where locals eat. Climb to the hilltop for a 360-degree Valley panorama. Most tourists have never heard of it.",
+      "spiritual": "Bagh Bhairav Temple holds a shield-shaped image said to be the skin of a tiger god. The hilltop Uma Maheshwar temple has an 11th-century Shiva-Parvati carving considered one of the finest in Nepal."
+    },
+    "best_months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    "tags": ["food", "heritage", "hidden_gems", "spiritual"],
+    "hidden_gem": true,
+    "crowd_score": {
+      "Jan": 1, "Feb": 2, "Mar": 2, "Apr": 3, "May": 2,
+      "Jun": 1, "Jul": 1, "Aug": 1, "Sep": 2, "Oct": 3,
+      "Nov": 2, "Dec": 1
+    }
+  },
+  {
+    "id": "MRD",
+    "name": "Mardi Himal Trek",
+    "region": "Gandaki",
+    "type": "trekking",
+    "lat": 28.3744,
+    "lng": 83.9439,
+    "altitude_m": 4500,
+    "difficulty": "Moderate",
+    "min_days": 5,
+    "avg_cost_usd": 350,
+    "description": "A ridgeline trek through rhododendron forests to Mardi Himal's high camp at 4,500m — face-to-face with Machhapuchhre's south face.",
+    "interest_descriptions": {
+      "trekking": "5-day moderate trek from Kande through dense rhododendron forests, emerging onto exposed ridgeline above the clouds. High camp sits at 4,500m directly below Machhapuchhre's massive south face — one of the most dramatic campsites in Nepal.",
+      "adventure": "Walk a knife-edge ridge with 1,000m drops on either side, camp above the clouds at 4,500m, and wake up to Machhapuchhre filling your entire field of vision. Less crowded alternative to ABC with more dramatic terrain.",
+      "hidden_gems": "Opened as an official trail only in 2012, this is the newest Annapurna trek. While hundreds queue at ABC, you might have the Mardi ridgeline to yourself. The forest camp is a magical spot in moss-draped old growth.",
+      "food": "Teahouse meals along the trail — fresh dal bhat cooked on wood fires, Gurung bread (like thick roti) with honey, and warming chiya (milk tea). Low Camp and High Camp lodges serve hearty meals with the best mountain views in Nepal."
+    },
+    "best_months": ["Mar", "Apr", "Oct", "Nov", "Dec"],
+    "tags": ["trekking", "adventure", "hidden_gems"],
+    "hidden_gem": true,
+    "crowd_score": {
+      "Jan": 2, "Feb": 3, "Mar": 5, "Apr": 6, "May": 4,
+      "Jun": 1, "Jul": 1, "Aug": 1, "Sep": 3, "Oct": 7,
+      "Nov": 5, "Dec": 3
+    }
+  },
+  {
+    "id": "ABC",
+    "name": "Annapurna Base Camp",
+    "region": "Gandaki",
+    "type": "trekking",
+    "lat": 28.5308,
+    "lng": 83.8780,
+    "altitude_m": 4130,
+    "difficulty": "Moderate",
+    "min_days": 7,
+    "avg_cost_usd": 500,
+    "description": "Trek into the Annapurna Sanctuary — a natural amphitheater surrounded by 8,000m+ peaks at 4,130m base camp.",
+    "interest_descriptions": {
+      "trekking": "7-10 day classic trek through Gurung villages, bamboo forests, and waterfalls into the Annapurna Sanctuary — a glacial amphitheater ringed by Annapurna I (8,091m), Annapurna South, Hiunchuli, and Machhapuchhre.",
+      "adventure": "Cross the steaming Jhinu hot springs, trek through the Modi Khola gorge, emerge into the massive snow amphitheater of the Sanctuary, and stand at 4,130m surrounded by five peaks over 7,000m.",
+      "food": "Some of the best teahouse food in Nepal — Gurung villages serve thick dal bhat with 6+ sides, Chomrong has excellent bakeries, and the hot springs at Jhinu deserve a celebratory meal. Try Gurung dhido (buckwheat pudding) and sel roti.",
+      "spiritual": "The Annapurna Sanctuary is considered sacred by Gurung people — no killing of animals is allowed inside. Machhapuchhre Base Camp has a mysterious serenity. The locals believe the Sanctuary is the home of the gods."
+    },
+    "best_months": ["Mar", "Apr", "Oct", "Nov"],
+    "tags": ["trekking", "adventure", "food"],
+    "hidden_gem": false,
+    "crowd_score": {
+      "Jan": 2, "Feb": 4, "Mar": 7, "Apr": 8, "May": 5,
+      "Jun": 2, "Jul": 1, "Aug": 1, "Sep": 4, "Oct": 9,
+      "Nov": 7, "Dec": 3
+    }
+  },
+  {
+    "id": "LNG",
+    "name": "Langtang Valley",
+    "region": "Bagmati",
+    "type": "trekking",
+    "lat": 28.2136,
+    "lng": 85.5619,
+    "altitude_m": 3870,
+    "difficulty": "Moderate",
+    "min_days": 7,
+    "avg_cost_usd": 450,
+    "description": "The closest major trek to Kathmandu — walk through Tamang villages devastated and rebuilt after the 2015 earthquake into a glacial valley with 7,000m peaks.",
+    "interest_descriptions": {
+      "trekking": "7-day trek from Syabrubesi through oak and rhododendron forests to Kyanjin Gompa (3,870m). Climb Kyanjin Ri (4,773m) for panoramic views. Tamang Heritage Trail extension adds cultural depth. Closest big mountain trek to Kathmandu.",
+      "food": "Kyanjin Gompa has Nepal's highest-altitude cheese factory (Swiss-established in the 1950s). Fresh yak cheese, yak milk curd, and yak butter tea. Tamang villages serve gundruk soup, dhido, and sel roti. Buy local cheese wheels to carry home.",
+      "hidden_gems": "Overshadowed by Annapurna and Everest but equally stunning. The devastation and resilience from the 2015 earthquake adds deep emotional weight. Fewer trekkers means more personal lodge experiences and genuine Tamang hospitality.",
+      "spiritual": "Kyanjin Gompa is a living Tibetan Buddhist monastery. The Tamang Heritage Trail passes through villages with centuries-old monasteries, prayer flags, and mani walls. Tamang culture is deeply Buddhist with its own unique festivals."
+    },
+    "best_months": ["Mar", "Apr", "May", "Oct", "Nov"],
+    "tags": ["trekking", "hidden_gems", "food", "spiritual"],
+    "hidden_gem": false,
+    "crowd_score": {
+      "Jan": 1, "Feb": 2, "Mar": 5, "Apr": 6, "May": 4,
+      "Jun": 2, "Jul": 1, "Aug": 1, "Sep": 3, "Oct": 7,
+      "Nov": 5, "Dec": 2
+    }
+  },
+  {
+    "id": "NGK",
+    "name": "Nagarkot",
+    "region": "Bagmati",
+    "type": "nature",
+    "lat": 27.7172,
+    "lng": 85.5200,
+    "altitude_m": 2175,
+    "difficulty": "Easy",
+    "min_days": 1,
+    "avg_cost_usd": 50,
+    "description": "Hilltop viewpoint 30km east of Kathmandu with panoramic sunrise views spanning from Dhaulagiri to Everest on clear days.",
+    "interest_descriptions": {
+      "relaxation": "A quiet hillside retreat from Kathmandu's chaos — stay overnight at a lodge and wake to sunrise painting the Himalayan chain gold. Afternoon walks through terraced fields and quiet farms. Perfect for decompressing.",
+      "adventure": "Mountain biking downhill from Nagarkot to Bhaktapur is a classic ride. The Nagarkot-Changunarayan day hike (4 hrs) descends through forest to one of Nepal's oldest Hindu temples with valley views the whole way.",
+      "food": "Fresh hill-farmed vegetables cooked in traditional style at small lodges. Try local makai (corn) roasted over charcoal, aalu-rwas (potato pancake), and organic honey from hillside apiaries. Most lodges grow their own herbs and greens.",
+      "hidden_gems": "Skip the crowded Nagarkot Tower — walk 20 minutes north along the ridge to an unmarked clearing with better views and zero tourists. The Changu Narayan hike below is a 1,500-year-old temple that most Kathmandu tourists miss."
+    },
+    "best_months": ["Jan", "Feb", "Mar", "Oct", "Nov", "Dec"],
+    "tags": ["relaxation", "adventure", "food", "hidden_gems"],
+    "hidden_gem": false,
+    "crowd_score": {
+      "Jan": 3, "Feb": 4, "Mar": 5, "Apr": 6, "May": 4,
+      "Jun": 2, "Jul": 1, "Aug": 1, "Sep": 3, "Oct": 7,
+      "Nov": 6, "Dec": 4
+    }
+  },
+  {
+    "id": "BRP",
+    "name": "Bardia National Park",
+    "region": "Bheri",
+    "type": "wildlife",
+    "lat": 28.3900,
+    "lng": 81.5000,
+    "altitude_m": 150,
+    "difficulty": "Easy",
+    "min_days": 3,
+    "avg_cost_usd": 250,
+    "description": "Nepal's largest national park in the far west — wilder and less-visited than Chitwan, with higher chances of spotting royal Bengal tigers and wild elephants.",
+    "interest_descriptions": {
+      "wildlife": "Higher tiger density than Chitwan with a fraction of the tourists. Walking safaris with expert Tharu guides, wild elephant herds, Gangetic dolphins in the Karnali River, gharials, and one-horned rhinos translocated from Chitwan.",
+      "adventure": "Multi-day jungle treks camping in the forest, rafting the Karnali River through tiger territory, night safaris by jeep, and heart-pounding walking safaris where you track tiger pugmarks on foot.",
+      "hidden_gems": "Only 5% of Nepal's wildlife tourists come here — Chitwan gets all the attention. But Bardia is wilder, bigger, and more remote. The Tharu villages around the park gate are some of the most welcoming in Nepal.",
+      "food": "Authentic Tharu homestay meals — fish from the Karnali River, wild boar curry, snail curry (ghonghi), dhikri steamed dumplings, and home-brewed rice beer. The Tharu stick dance celebration often includes a communal feast."
+    },
+    "best_months": ["Jan", "Feb", "Mar", "Apr", "Oct", "Nov", "Dec"],
+    "tags": ["wildlife", "adventure", "hidden_gems", "food"],
+    "hidden_gem": true,
+    "crowd_score": {
+      "Jan": 2, "Feb": 3, "Mar": 4, "Apr": 4, "May": 3,
+      "Jun": 1, "Jul": 1, "Aug": 1, "Sep": 2, "Oct": 5,
+      "Nov": 4, "Dec": 2
+    }
+  },
+  {
+    "id": "TNS",
+    "name": "Tansen (Palpa)",
+    "region": "Lumbini",
+    "type": "heritage",
+    "lat": 27.8667,
+    "lng": 83.5500,
+    "altitude_m": 1343,
+    "difficulty": "Easy",
+    "min_days": 2,
+    "avg_cost_usd": 70,
+    "description": "A hilltop Magar-Newari town in western Nepal known for dhaka fabric weaving, metalwork, and panoramic views from Shreenagar Hill.",
+    "interest_descriptions": {
+      "heritage": "The old bazaar has preserved Newari architecture with carved wooden windows and Magar influences. Tansen Durbar (palace) is an impressive Rana-era building. Artisans weave dhaka fabric (Nepal's national textile) on handlooms in their homes.",
+      "food": "Known for ko-aila (Magar rice wine), dhaka-spiced meats, and the best wholesome hill cuisine in western Nepal. Try saadheko (spiced salad), titaura (dried fruit leather from local fruits), and woodfire-baked breads at traditional bhattis.",
+      "hidden_gems": "On the Kathmandu-Lumbini route but ignored by every tourist. Shreenagar Hill above town gives a 360-degree view from Dhaulagiri to the Terai plains. The Rani Mahal — Nepal's Taj Mahal — is a stunning riverside palace 2 hours away by bus.",
+      "relaxation": "A quiet, clean hill town with morning fog, cobbled streets, and genuinely curious locals who rarely see foreigners. Perfect slow-travel stop between Pokhara and Lumbini."
+    },
+    "best_months": ["Feb", "Mar", "Apr", "Oct", "Nov", "Dec"],
+    "tags": ["heritage", "food", "hidden_gems", "relaxation"],
+    "hidden_gem": true,
+    "crowd_score": {
+      "Jan": 1, "Feb": 2, "Mar": 3, "Apr": 3, "May": 2,
+      "Jun": 1, "Jul": 1, "Aug": 1, "Sep": 2, "Oct": 3,
+      "Nov": 2, "Dec": 1
+    }
+  },
+  {
+    "id": "JNK",
+    "name": "Janakpur",
+    "region": "Mithila",
+    "type": "spiritual",
+    "lat": 26.7288,
+    "lng": 85.9263,
+    "altitude_m": 76,
+    "difficulty": "Easy",
+    "min_days": 2,
+    "avg_cost_usd": 60,
+    "description": "Sacred city of the Terai — birthplace of goddess Sita, home to the ornate Janaki Mandir, and center of vibrant Maithili culture.",
+    "interest_descriptions": {
+      "spiritual": "Janaki Mandir is one of Nepal's most beautiful temples — a marble and sandstone masterpiece dedicated to Sita's birthplace. Ram Sita Vivah Mandap marks the divine wedding site. The Chhath festival (November) with devotees waist-deep in holy ponds is unforgettable.",
+      "heritage": "The Mithila region has its own distinct art tradition — women paint elaborate murals on house walls with natural pigments. The Maithili culture is unique in Nepal with its own language, cuisine, and traditions closer to Bihar than to Kathmandu.",
+      "food": "Maithili cuisine is Nepal's most underrated — litti chokha (stuffed wheat balls with mashed vegetables), dahi chura (beaten rice with curd), makhana kheer (fox nut pudding), sattu paratha, and paan (betel leaf) culture. Experience a traditional Maithili sweet shop.",
+      "hidden_gems": "Almost no foreign tourists visit Janakpur. The annual Ram-Sita wedding re-enactment (Vivah Panchami in November) draws millions of pilgrims but barely any foreigners. The Mithila Art Institute sells authentic hand-painted art."
+    },
+    "best_months": ["Oct", "Nov", "Dec", "Jan", "Feb", "Mar"],
+    "tags": ["spiritual", "heritage", "food", "hidden_gems"],
+    "hidden_gem": true,
+    "crowd_score": {
+      "Jan": 3, "Feb": 3, "Mar": 4, "Apr": 4, "May": 3,
+      "Jun": 2, "Jul": 2, "Aug": 2, "Sep": 3, "Oct": 5,
+      "Nov": 7, "Dec": 4
+    }
+  },
+  {
+    "id": "GHN",
+    "name": "Ghandruk",
+    "region": "Gandaki",
+    "type": "trekking",
+    "lat": 28.3744,
+    "lng": 83.8060,
+    "altitude_m": 1940,
+    "difficulty": "Easy",
+    "min_days": 3,
+    "avg_cost_usd": 150,
+    "description": "A classic stone-paved Gurung village perched above Modi Khola valley — stunning Annapurna South and Machhapuchhre views with rich Gurung culture.",
+    "interest_descriptions": {
+      "trekking": "Easy 2-3 day trek from Nayapul through terraced fields. The village at 1,940m overlooks the Modi Khola gorge with Annapurna South towering 6,000m above. Good acclimatization stop before ABC or a standalone short trek.",
+      "food": "Gurung homestays serve authentic hill cuisine — dhido (buckwheat pudding) with gundruk (fermented greens), sel roti (ring-shaped rice bread), raksi (home-distilled millet spirit), and fresh seasonal vegetables from terraced farms. Community-managed lodges cook to traditional recipes.",
+      "heritage": "The Gurung Museum showcases traditional costumes, ceremonial masks, and honey-hunting artifacts. Stone houses with slate roofs represent centuries of mountain architecture. The village has been a center of Gurkha military recruitment — many homes have regimental memorabilia.",
+      "hidden_gems": "The Australian Base Camp viewpoint above Ghandruk is a lesser-known spot with arguably better mountain views than the village itself. The hot springs at Jhinu (2-hour walk) are a perfect side trip."
+    },
+    "best_months": ["Mar", "Apr", "Oct", "Nov", "Dec"],
+    "tags": ["trekking", "food", "heritage", "hidden_gems"],
+    "hidden_gem": false,
+    "crowd_score": {
+      "Jan": 2, "Feb": 3, "Mar": 6, "Apr": 7, "May": 4,
+      "Jun": 2, "Jul": 1, "Aug": 1, "Sep": 3, "Oct": 8,
+      "Nov": 6, "Dec": 3
+    }
+  },
+  {
+    "id": "DHL",
+    "name": "Dhulikhel",
+    "region": "Bagmati",
+    "type": "nature",
+    "lat": 27.6200,
+    "lng": 85.5600,
+    "altitude_m": 1550,
+    "difficulty": "Easy",
+    "min_days": 1,
+    "avg_cost_usd": 50,
+    "description": "A quiet Newari hill town 30km east of Kathmandu — organic farm stays, Himalayan panoramas, and the Namobuddha monastery trek.",
+    "interest_descriptions": {
+      "food": "The farm-to-table capital of Nepal — Dhulikhel Lodge grows its own organic vegetables and serves traditional Newari cuisine with modern flair. Gaia Restaurant uses only local ingredients. Try wild nettle soup, organic selroti, and locally-pressed mustard oil dishes.",
+      "relaxation": "Himalayan views without the long trek — wake up to a panorama stretching from Langtang to Everest. Spa resorts, meditation retreats, and peaceful walks through terraced Newari villages. Perfect post-trek recovery base.",
+      "spiritual": "The Namobuddha Monastery (3-hour walk through forests) is one of the most important Buddhist pilgrimage sites in Nepal — where a prince sacrificed his body to feed a starving tigress. Active monastery with meditation retreats open to visitors.",
+      "hidden_gems": "Most tourists go to Nagarkot, but Dhulikhel has better culture, better food, and equal views. The Panauti medieval town (20min drive) is the most untouched Newari settlement in the Valley. Zero tourist infrastructure — this is local Nepal."
+    },
+    "best_months": ["Jan", "Feb", "Mar", "Oct", "Nov", "Dec"],
+    "tags": ["food", "relaxation", "spiritual", "hidden_gems"],
+    "hidden_gem": false,
+    "crowd_score": {
+      "Jan": 2, "Feb": 3, "Mar": 4, "Apr": 5, "May": 3,
+      "Jun": 2, "Jul": 1, "Aug": 1, "Sep": 3, "Oct": 5,
+      "Nov": 4, "Dec": 3
+    }
+  },
+  {
+    "id": "MNJ",
+    "name": "Manang Valley",
+    "region": "Gandaki",
+    "type": "adventure",
+    "lat": 28.6660,
+    "lng": 84.0178,
+    "altitude_m": 3540,
+    "difficulty": "Moderate",
+    "min_days": 4,
+    "avg_cost_usd": 300,
+    "description": "A high-altitude Tibetan-influenced valley on the Annapurna Circuit — ice lakes, yak pastures, and the ancient trading town of Manang.",
+    "interest_descriptions": {
+      "adventure": "Hike up to ice Lake (4,600m) for turquoise glacial water, explore the Gangapurna ice fall viewpoint, and mountain bike through the valley. The Milarepa Cave nearby is where the famous Buddhist yogi meditated.",
+      "trekking": "Key acclimatization stop on the Annapurna Circuit. Day hikes to Gangapurna Lake, Praken Gompa viewpoint, Ice Lake, and Kicho Lake. The valley offers 3-4 excellent day hikes at high altitude to prepare for Thorong La.",
+      "food": "Manang bakeries are legendary among trekkers — fresh apple pie, cinnamon rolls, and chocolate cake at 3,540m. Yak steak, Tibetan butter tea, tsampa porridge, and thukpa noodle soup in traditional lodges. The Yak Restaurant in Manang village is a trekker institution.",
+      "spiritual": "Braga Monastery (500 years old) has a prayer room with 108 terra-cotta Buddhas — eerie and beautiful. Praken Gompa above Manang offers meditation rooms with Annapurna III views. The valley's Tibetan Buddhist culture is deeply authentic."
+    },
+    "best_months": ["Mar", "Apr", "May", "Oct", "Nov"],
+    "tags": ["adventure", "trekking", "food", "spiritual"],
+    "hidden_gem": false,
+    "crowd_score": {
+      "Jan": 1, "Feb": 2, "Mar": 4, "Apr": 6, "May": 4,
+      "Jun": 2, "Jul": 1, "Aug": 1, "Sep": 3, "Oct": 8,
+      "Nov": 5, "Dec": 2
+    }
+  },
+  {
+    "id": "PTN",
+    "name": "Patan (Lalitpur)",
+    "region": "Bagmati",
+    "type": "heritage",
+    "lat": 27.6727,
+    "lng": 85.3252,
+    "altitude_m": 1400,
+    "difficulty": "Easy",
+    "min_days": 1,
+    "avg_cost_usd": 40,
+    "description": "City of Fine Arts — Nepal's finest museum, Krishna Mandir stone temple, golden Mahaboudha, and living artisan workshops where bronze and woodcraft continue.",
+    "interest_descriptions": {
+      "heritage": "Patan Museum (Nepal's best) is in the restored Malla palace. Krishna Mandir's stone carvings depict the entire Mahabharata. Golden Temple (Hiranya Varna Mahavihar) is a 12th-century Buddhist monastery. The metalwork quarter at Thaina still casts statues using lost-wax technique — 15 generations strong.",
+      "food": "Patan's food scene rivals Thamel without the tourist markup. Honacha for modern Newari fusion, Cafe Soma for organic coffee, Third Eye restaurant for Newari tasting menus. Try traditional kvaye (fermented rice drink) at street shops near Mangal Bazaar.",
+      "spiritual": "The Golden Temple is an active Buddhist monastery where a 12-year-old boy serves as head priest on rotation. Rato Machhindranath Temple hosts Nepal's longest festival (months-long chariot procession). Rudra Varna Mahavihar has meditation sessions open to visitors.",
+      "hidden_gems": "Walk south from Durbar Square to Mahaboudha Temple — 9,000 terracotta Buddhas covering every brick. The family workshop next door has cast bronze since the 1300s. Patan's arts-and-crafts neighborhood Thaina is better for authentic souvenirs than Thamel."
+    },
+    "best_months": ["Feb", "Mar", "Apr", "Oct", "Nov", "Dec"],
+    "tags": ["heritage", "food", "spiritual", "hidden_gems"],
+    "hidden_gem": false,
+    "crowd_score": {
+      "Jan": 3, "Feb": 5, "Mar": 6, "Apr": 7, "May": 5,
+      "Jun": 3, "Jul": 2, "Aug": 2, "Sep": 4, "Oct": 8,
+      "Nov": 7, "Dec": 4
+    }
+  },
+  {
+    "id": "KPL",
+    "name": "Kapan & Kopan Monastery",
+    "region": "Bagmati",
+    "type": "spiritual",
+    "lat": 27.7375,
+    "lng": 85.3600,
+    "altitude_m": 1450,
+    "difficulty": "Easy",
+    "min_days": 2,
+    "avg_cost_usd": 80,
+    "description": "A Tibetan Buddhist monastery on a hilltop above Kathmandu offering meditation courses, monastic retreats, and peaceful contemplation.",
+    "interest_descriptions": {
+      "spiritual": "Kopan Monastery runs the famous month-long November course in Tibetan Buddhist meditation. Shorter 7-day and weekend retreats available all year. Join monks for morning and evening pujas, learn meditation from resident lamas, and find genuine inner peace above the Valley chaos.",
+      "relaxation": "A oasis of calm above Kathmandu's frenzy. Beautiful gardens, prayer wheels, stupas, and meditation halls with valley views. Even if you don't take a course, the peaceful atmosphere alone is worth the visit. Simple vegetarian meals included.",
+      "hidden_gems": "Most tourists do the standard temple circuit — very few discover Kopan. The hilltop location offers spectacular sunrise over the Himalayan range. The monastery bookshop has the best collection of Buddhist texts in Nepal.",
+      "heritage": "Founded in 1969 by Lama Thubten Yeshe, Kopan was one of the first monasteries to teach Tibetan Buddhism to Westerners. It helped spark the global Tibetan Buddhist movement. The main prayer hall has exquisite thangka paintings and butter sculptures."
+    },
+    "best_months": ["Jan", "Feb", "Mar", "Apr", "May", "Sep", "Oct", "Nov", "Dec"],
+    "tags": ["spiritual", "relaxation", "hidden_gems", "heritage"],
+    "hidden_gem": true,
+    "crowd_score": {
+      "Jan": 2, "Feb": 2, "Mar": 3, "Apr": 3, "May": 2,
+      "Jun": 1, "Jul": 1, "Aug": 1, "Sep": 2, "Oct": 3,
+      "Nov": 5, "Dec": 2
+    }
+  },
+  {
+    "id": "BWL",
+    "name": "Begnas & Rupa Lakes",
+    "region": "Gandaki",
+    "type": "nature",
+    "lat": 28.1733,
+    "lng": 84.0900,
+    "altitude_m": 650,
+    "difficulty": "Easy",
+    "min_days": 2,
+    "avg_cost_usd": 60,
+    "description": "Twin lakes 15km east of Pokhara — serene, uncrowded alternatives to Phewa with fishing villages, organic farms, and Annapurna views.",
+    "interest_descriptions": {
+      "relaxation": "Phewa Lake without the commercialization. Kayak on Begnas in total silence, swim in clean water, and walk the ridge trail between Begnas and Rupa lakes through small farming communities. Wellness retreats and yoga ashrams dot the lakshore.",
+      "food": "Fish farms on Begnas supply the freshest tilapia and carp in Nepal — eaten grilled, fried, or curried at lakeside shacks. Organic vegetable farms sell produce to Pokhara restaurants. Try the local fish-and-rice meal at any fisherman's family home along the shore.",
+      "hidden_gems": "Even Pokhara locals consider Begnas their secret escape. No tourist boats, no souvenir shops, no touts. Just farmers, fishermen, and mountains reflected in still water. The sunrise paddle on Begnas rivals anything in the Annapurna region.",
+      "adventure": "Kayak both lakes in a day, mountain bike the ridge between them, and try community-managed fishing excursions where you catch your own dinner. The Begnas-Rupa ridgeline is an excellent half-day hike with zero trekkers."
+    },
+    "best_months": ["Jan", "Feb", "Mar", "Apr", "Oct", "Nov", "Dec"],
+    "tags": ["relaxation", "food", "hidden_gems", "adventure"],
+    "hidden_gem": true,
+    "crowd_score": {
+      "Jan": 1, "Feb": 2, "Mar": 3, "Apr": 3, "May": 2,
+      "Jun": 1, "Jul": 1, "Aug": 1, "Sep": 2, "Oct": 4,
+      "Nov": 3, "Dec": 2
     }
   }
 ]

@@ -42,6 +42,9 @@ REGION_ENCODING = {
     "Mustang": 6,
     "Tanahun": 7,
     "Mechi": 8,
+    "Bheri": 9,
+    "Lumbini": 10,
+    "Mithila": 11,
 }
 
 
@@ -131,6 +134,7 @@ def get_crowd_all(month_num):
                 "crowd_score": score,
                 "crowd_label": label,
                 "color": color,
+                "description": dest.get("description", ""),
             }
         )
     return results

@@ -55,6 +55,9 @@ REGION_ENCODING = {
     "Mustang": 6,
     "Tanahun": 7,
     "Mechi": 8,
+    "Bheri": 9,
+    "Lumbini": 10,
+    "Mithila": 11,
 }
 
 
@@ -157,7 +160,7 @@ def train_crowd_model():
 
     feature_names = ["month", "dest_type", "region", "altitude_m", "is_hidden_gem"]
 
-    print(f"Training samples: {len(X)} (10 destinations x 12 months)")
+    print(f"Training samples: {len(X)} ({len(destinations)} destinations x 12 months)")
     print(f"Features per sample: {len(X[0])}")
     print(f"Target range: {y.min()} - {y.max()}")
     print(f"Feature names: {feature_names}")

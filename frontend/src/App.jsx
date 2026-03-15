@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import axios from 'axios';
+import { MapPin, Sparkles } from 'lucide-react';
 import Navbar from './components/Navbar';
 import { HeroSection } from './components/ui/hero-section-dark';
 import OnboardingForm from './components/OnboardingForm';
@@ -73,19 +74,10 @@ export default function App() {
     } else if (target === 'onboarding') {
       setView('onboarding');
     } else if (target === 'dashboard') {
-      if (itineraryData) {
-        setShowHeritage(false);
-        setView('dashboard');
-      } else {
-        setView('onboarding');
-      }
+      setShowHeritage(false);
+      setView('dashboard');
     } else if (target === 'heritage') {
-      if (itineraryData) {
-        setView('dashboard');
-        handleHeritageClick('PSP');
-      } else {
-        setView('onboarding');
-      }
+      setView('dashboard');
     }
   };
 
@@ -194,7 +186,7 @@ export default function App() {
         <div className="w-[40%] h-full overflow-hidden">
           {showHeritage && heritageSite ? (
             <HeritagePanel site={heritageSite} onClose={handleCloseHeritage} />
-          ) : (
+          ) : itineraryData ? (
             <ItineraryPanel
               itinerary={itineraryData?.itinerary || []}
               totalCost={itineraryData?.total_cost_usd}
@@ -207,6 +199,24 @@ export default function App() {
               onRegenerate={handleRegenerate}
               loading={loading}
             />
+          ) : (
+            <div className="h-full flex flex-col items-center justify-center p-8 text-center">
+              <div className="bg-purple-500/10 p-4 rounded-2xl mb-5 border border-purple-500/20">
+                <MapPin className="w-8 h-8 text-purple-400" />
+              </div>
+              <h3 className="text-white text-lg font-semibold mb-2">Explore Nepal's Crowd Map</h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-xs">
+                Click on any destination marker to see crowd levels and trends. Heritage sites open detailed cultural stories.
+              </p>
+              <button
+                onClick={() => setView('onboarding')}
+                className="flex items-center gap-2 px-5 py-2.5 bg-purple-600 hover:bg-purple-500 text-white text-sm font-medium rounded-xl transition-colors"
+              >
+                <Sparkles className="w-4 h-4" />
+                Plan a Personalized Trip
+              </button>
+              <p className="text-gray-600 text-xs mt-3">Get AI-powered itineraries tailored to you</p>
+            </div>
           )}
         </div>
       </div>

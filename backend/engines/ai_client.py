@@ -4,7 +4,7 @@ import threading
 from openai import AzureOpenAI
 from dotenv import load_dotenv
 
-load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env'))
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
 
 _client = None
 _lock = threading.Lock()
@@ -15,9 +15,9 @@ MAX_RPM = 9  # stay under 10 RPM limit
 def get_client():
     global _client
     if _client is None:
-        api_key = os.getenv('AZURE_OPENAI_API_KEY', '')
-        endpoint = os.getenv('AZURE_OPENAI_ENDPOINT', '')
-        api_version = os.getenv('AZURE_OPENAI_API_VERSION', '2024-12-01-preview')
+        api_key = os.getenv("AZURE_OPENAI_API_KEY", "")
+        endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "")
+        api_version = os.getenv("AZURE_OPENAI_API_VERSION", "2024-12-01-preview")
         if api_key and endpoint:
             _client = AzureOpenAI(
                 api_key=api_key,
@@ -45,7 +45,7 @@ def ai_generate(system_prompt, user_prompt, max_tokens=1024, temperature=0.7):
     if not _rate_limit_check():
         return None
 
-    model = os.getenv('AZURE_OPENAI_MODEL', 'gpt-5.4')
+    model = os.getenv("AZURE_OPENAI_MODEL", "gpt-5.4")
 
     try:
         response = client.chat.completions.create(

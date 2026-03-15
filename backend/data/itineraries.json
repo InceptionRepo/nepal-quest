@@ -362,5 +362,297 @@
       "Zero tourist crowds on the entire route",
       "Living Tibetan Buddhist culture in Mustang"
     ]
+  },
+  {
+    "id": "ITIN_FOOD5",
+    "title": "5-Day Nepal Food Trail — Kathmandu to Pokhara",
+    "duration_days": 5,
+    "interest_tags": ["food", "heritage", "hidden_gems"],
+    "budget_range": "low",
+    "fitness_level": 1,
+    "destinations": ["KTM", "BKT", "KRT", "BND", "PKR"],
+    "daily_plan": [
+      {
+        "day": 1,
+        "title": "Kathmandu Street Food Crawl",
+        "morning": "Start at Ason Bazaar — the oldest market in Kathmandu. Try bara (lentil fritters) from street vendors and freshly pressed sugarcane juice. Walk through spice stalls and dried fish shops.",
+        "afternoon": "Cross to Kirtipur hilltop for the legendary samay baji feast at Newa Lahana — beaten rice, marinated buffalo choila, aalu tama (potato-bamboo shoot), black-eye beans, egg, and aachar. Wash it down with aila (rice spirit).",
+        "evening": "Evening food walk through Thamel — momos at Yangling (the original momo institution), then traditional Newari dinner with chatamari and kwati (mixed-bean soup) at a heritage restaurant in Patan.",
+        "cost_usd": 25,
+        "transport": "Walking + Local bus"
+      },
+      {
+        "day": 2,
+        "title": "Bhaktapur — City of King Curd & Newari Feasts",
+        "morning": "Bus to Bhaktapur (30 min). Head straight to Sukuldhoka for fresh juju dhau (king curd) in hand-thrown clay pots — widely considered Nepal's finest dairy product. Try the black sesame version.",
+        "afternoon": "Lunch at Cafe Nyatapola on the five-story temple steps — chatamari with egg, minced buffalo, and fresh coriander. Then explore Pottery Square where the clay pots for juju dhau are made.",
+        "evening": "Newari feast at a traditional bhatti — yomari dumplings (if in season Dec), silu (meat soup), baji set, and tongba (fermented millet drink). Watch artisans at work in Dattatreya Square.",
+        "cost_usd": 30,
+        "transport": "Local bus"
+      },
+      {
+        "day": 3,
+        "title": "Bandipur — Hilltop Cooking & Organic Honey",
+        "morning": "Tourist bus from Kathmandu toward Pokhara, stopping at Bandipur junction (4-5 hrs). Walk up the historic bazaar trail to the car-free hilltop town.",
+        "afternoon": "Cooking class at a Newari guesthouse — learn to make sel roti (ring-shaped rice bread), aalu tama, and chatamari from scratch using local ingredients. Taste organic honey from hillside apiaries.",
+        "evening": "Dinner at a rooftop cafe watching the sun set behind Manaslu and Himalchuli. Try local aila paired with grilled sukuti (dried meat) and fresh greens from the garden.",
+        "cost_usd": 35,
+        "transport": "Tourist bus + Walking"
+      },
+      {
+        "day": 4,
+        "title": "Pokhara Lakeside — Thakali Feast & Lake Fish",
+        "morning": "Continue to Pokhara (3 hrs from Bandipur). Arrive at Lakeside and head straight to a Thakali restaurant for the famous Thakali set meal — dal, rice, pickled timur pepper, seasonal greens, meat of choice, and ghee.",
+        "afternoon": "Visit the old Pokhara bazaar (not the tourist strip) for local snacks — sel roti stands, sekuwa (Nepali BBQ) grills, and fresh fruit from Terai vendors. Pick up Marpha apple cider.",
+        "evening": "Grilled fresh Phewa Lake fish (trout or carp) at a lakeside shack. Finish with Tibetan bread and honey at a rooftop cafe watching the sunset paint Machhapuchhre pink.",
+        "cost_usd": 40,
+        "transport": "Tourist bus"
+      },
+      {
+        "day": 5,
+        "title": "Begnas Lake Fresh Fish & Farewell",
+        "morning": "Drive 30 minutes to Begnas Lake. Visit the fish farms and eat the freshest tilapia and carp in Nepal — grilled, curried, or fried — at a lakeside family home. Simple, perfect.",
+        "afternoon": "Return to Pokhara. Final food shopping — buy Ilam tea, Marpha apple brandy, churpi (dried yak cheese), and Nepali spice mixes (jimbu, timur) to take home.",
+        "evening": "Farewell dinner at a modern Nepali fine-dining restaurant — try a Nepali tasting menu that reinterprets traditional dishes. A culinary journey throughall five days summarized on one plate.",
+        "cost_usd": 35,
+        "transport": "Local bus"
+      }
+    ],
+    "total_cost_usd": 165,
+    "highlights": [
+      "Samay baji feast in Kirtipur — the food capital",
+      "Juju dhau king curd in hand-thrown clay pots",
+      "Newari cooking class in Bandipur",
+      "Thakali set meal — Nepal's finest regional cuisine",
+      "Fresh Begnas Lake fish at a family home"
+    ]
+  },
+  {
+    "id": "ITIN_SPIR7",
+    "title": "7-Day Spiritual Nepal — Temples, Monasteries & Meditation",
+    "duration_days": 7,
+    "interest_tags": ["spiritual", "heritage", "relaxation"],
+    "budget_range": "low",
+    "fitness_level": 1,
+    "destinations": ["KTM", "KPL", "LMB", "JNK"],
+    "daily_plan": [
+      {
+        "day": 1,
+        "title": "Pashupatinath & Boudhanath — Hindu & Buddhist Pillars",
+        "morning": "5 AM sunrise visit to Pashupatinath — Nepal's holiest Hindu temple. Watch the morning aarti ceremony, observe sadhus in meditation, and walk the cremation ghats as incense fills the air.",
+        "afternoon": "Drive to Boudhanath Stupa (15 min). Join the afternoon kora — walk clockwise spinning prayer wheels with hundreds of Tibetan monks and devotees. Visit Shechen Monastery's hidden meditation room.",
+        "evening": "Evening butter lamp ceremony at Boudhanath. Dinner at a rooftop restaurant overlooking the illuminated stupa as monks chant below.",
+        "cost_usd": 25,
+        "transport": "Taxi"
+      },
+      {
+        "day": 2,
+        "title": "Kopan Monastery — Tibetan Buddhist Retreat",
+        "morning": "Join the morning puja (6 AM) at Kopan Monastery on the hilltop above Boudhanath. Observe monks' ceremonial chanting with horns, drums, and cymbals.",
+        "afternoon": "Attend a meditation introduction session led by a resident lama. Walk through the peaceful gardens, spin prayer wheels, and visit the main prayer hall with its exquisite thangka paintings.",
+        "evening": "Simple vegetarian dinner at the monastery. Evening meditation session. Stay overnight at the monastery guesthouse for the full retreat experience.",
+        "cost_usd": 20,
+        "transport": "Taxi + Walking"
+      },
+      {
+        "day": 3,
+        "title": "Swayambhunath Sunrise & Namobuddha",
+        "morning": "Pre-dawn taxi to Swayambhunath. Climb the 365 steps before tourists arrive. Watch sunrise illuminate the Kathmandu Valley from the ancient stupa. Kora walk with monks.",
+        "afternoon": "Drive to Dhulikhel (1.5 hrs), then hike 3 hours through forest to Namobuddha Monastery — where a prince sacrificed himself to feed a starving tigress. Join afternoon chanting.",
+        "evening": "Stay at Namobuddha or return to Dhulikhel. Quiet contemplation with Himalayan sunset views from the hilltop.",
+        "cost_usd": 35,
+        "transport": "Taxi + Trekking"
+      },
+      {
+        "day": 4,
+        "title": "Fly to Lumbini — Birthplace of Buddha",
+        "morning": "Morning flight to Bhairahawa (30 min), then transfer to Lumbini. Enter the sacred garden in morning mist when it's most peaceful.",
+        "afternoon": "Visit Maya Devi Temple — stand at the exact spot where Siddhartha Gautama was born. See the Ashoka Pillar (249 BCE) and ancient monastery ruins. Meditate at the eternal peace flame.",
+        "evening": "Walk the canal between international monasteries. Visit the Myanmar Golden Temple and Vietnamese monastery. Full moon evenings here are profoundly moving.",
+        "cost_usd": 65,
+        "transport": "Flight + Rickshaw"
+      },
+      {
+        "day": 5,
+        "title": "Lumbini Deep Meditation & Monastery Circuit",
+        "morning": "Rent a bicycle and cycle the full 6 km monastery circuit. Visit the Japanese Peace Pagoda, Royal Thai Monastery, Chinese Zhong Hua Temple, and German Meditation Center.",
+        "afternoon": "Return to the sacred garden for extended meditation at the Bodhi Tree. Visit Tilaurakot (ancient Kapilvastu palace ruins — where Siddhartha grew up) 30 km away if time allows.",
+        "evening": "Attend an evening chanting ceremony at the Korean monastery. Simple vegetarian dinner and journal reflections.",
+        "cost_usd": 30,
+        "transport": "Bicycle"
+      },
+      {
+        "day": 6,
+        "title": "Janakpur — Sacred City of Sita",
+        "morning": "Bus or train to Janakpur (6-7 hrs through the Terai plains). The journey itself passes through Nepal's most rural landscapes — fields, villages, and slow river crossings.",
+        "afternoon": "Visit Janaki Mandir — the stunning marble-and-sandstone temple dedicated to goddess Sita's birthplace. See the Ram Sita Vivah Mandap (divine wedding site).",
+        "evening": "Evening aarti at the sacred ponds (dham) surrounding the temple. Experience the unique Maithili devotional culture — different from Kathmandu's in every way.",
+        "cost_usd": 30,
+        "transport": "Bus"
+      },
+      {
+        "day": 7,
+        "title": "Janakpur Ponds Circuit & Return",
+        "morning": "Visit the nine sacred ponds of Janakpur — pilgrims bathe at dawn in ritual purification. See the Mithila Art Institute where women paint traditional murals depicting Hindu mythology.",
+        "afternoon": "Buy authentic Mithila paintings directly from women artists. The art tradition here is recognized by UNESCO. Catch a flight or bus back to Kathmandu.",
+        "evening": "Return to Kathmandu. Farewell dinner at a Newari heritage restaurant reflecting on a week of profound spiritual encounters across three faiths.",
+        "cost_usd": 40,
+        "transport": "Flight or bus"
+      }
+    ],
+    "total_cost_usd": 245,
+    "highlights": [
+      "5 AM aarti at Pashupatinath's ancient ghats",
+      "Meditation retreat at Kopan Monastery",
+      "Standing at Buddha's exact birthplace in Lumbini",
+      "Cycling the global monastery circuit at Lumbini",
+      "Sacred ponds of Janakpur — goddess Sita's city"
+    ]
+  },
+  {
+    "id": "ITIN_WILD5",
+    "title": "5-Day Nepal Wildlife Safari — Chitwan & Bardia",
+    "duration_days": 5,
+    "interest_tags": ["wildlife", "adventure", "food"],
+    "budget_range": "medium",
+    "fitness_level": 1,
+    "destinations": ["CHT", "BRP"],
+    "daily_plan": [
+      {
+        "day": 1,
+        "title": "Chitwan — Into the Jungle",
+        "morning": "Tourist bus from Kathmandu to Chitwan (5-6 hrs) through winding mountain roads into the subtropical Terai lowlands. Check into a jungle lodge on the Rapti River bank.",
+        "afternoon": "Dugout canoe ride down the Rapti River — spot gharial crocodiles, mugger crocodiles, and kingfishers from just meters away. Watch for river dolphins surfacing.",
+        "evening": "Traditional Tharu cultural dance performance — the haunting stick dance and peacock dance. Dinner features Tharu specialties — fresh river fish curry and dhikri dumplings.",
+        "cost_usd": 60,
+        "transport": "Tourist bus + Canoe"
+      },
+      {
+        "day": 2,
+        "title": "Jeep Safari & Elephant Encounter",
+        "morning": "Dawn jeep safari into the core zone — track one-horned rhinoceros (almost guaranteed sighting), wild boar, spotted deer, and sloth bears. Your naturalist guide reads the jungle signs.",
+        "afternoon": "Visit the elephant breeding center to see baby elephants. Then a walking safari with an armed guide through sal forest — tracking tiger pugmarks and listening for alarm calls.",
+        "evening": "Sunset birdwatching from the lodge terrace — hornbills, Paradise flycatchers, and egrets. Night sounds briefing from your guide on what you'll hear: barking deer, owls, and distant tigers.",
+        "cost_usd": 80,
+        "transport": "Jeep + Walking"
+      },
+      {
+        "day": 3,
+        "title": "Chitwan to Bardia — The Wild West",
+        "morning": "Early departure for Bardia National Park (8-10 hrs by road through the Terai). Watch the landscape transition from busy eastern Terai to the wild, empty western plains.",
+        "afternoon": "Arrive at Bardia — immediately notice the difference from Chitwan. Fewer lodges, fewer tourists, more wilderness. Check into a Tharu-owned lodge near the park gate.",
+        "evening": "Meet your Tharu guide team and plan the next two days. Dinner of local Tharu cuisine — ghonghi (snail curry), wild boar stew, and river fish. The sounds of the jungle are louder here.",
+        "cost_usd": 50,
+        "transport": "Private jeep"
+      },
+      {
+        "day": 4,
+        "title": "Tiger Tracking & Karnali River",
+        "morning": "Walking safari at dawn into Bardia's core — higher tiger density than Chitwan with fraction of tourists. Track pugmarks, listen for alarm calls, and your guide may lead you to a sighting.",
+        "afternoon": "Raft a section of the Karnali River through the park — spot Gangetic dolphins (one of the world's rarest freshwater dolphins), gharials, and wild elephants on the riverbanks.",
+        "evening": "Night jeep safari to spot nocturnal wildlife — fishing cats, leopards, and owls. Return to lodge for Tharu celebration dinner with homestay family.",
+        "cost_usd": 90,
+        "transport": "Walking + Raft + Jeep"
+      },
+      {
+        "day": 5,
+        "title": "Morning Safari & Return",
+        "morning": "Final dawn safari — elephant grasslands where wild elephant herds graze. Birdwatching for Bengal florican (critically endangered) and swamp francolin in the wetlands.",
+        "afternoon": "Farewell lunch at the lodge. Begin return journey to Nepalgunj for evening flight to Kathmandu, or overnight and fly next morning.",
+        "evening": "Reflect on five days of encountering Nepal's incredible biodiversity — from rhinos and tigers to dolphins and elephants in two distinct national parks.",
+        "cost_usd": 65,
+        "transport": "Jeep + Flight"
+      }
+    ],
+    "total_cost_usd": 345,
+    "highlights": [
+      "One-horned rhino encounter in Chitwan",
+      "Bengal tiger tracking on foot in Bardia",
+      "Gangetic dolphin spotting on the Karnali River",
+      "Authentic Tharu village cuisine and culture",
+      "Night safari for leopards and fishing cats"
+    ]
+  },
+  {
+    "id": "ITIN_ABC7",
+    "title": "7-Day Annapurna Base Camp Trek",
+    "duration_days": 7,
+    "interest_tags": ["trekking", "adventure", "food"],
+    "budget_range": "medium",
+    "fitness_level": 2,
+    "destinations": ["PKR", "ABC", "GHN"],
+    "daily_plan": [
+      {
+        "day": 1,
+        "title": "Pokhara to Ghandruk",
+        "morning": "Drive from Pokhara to Nayapul (1.5 hrs). Begin trekking through Birethanti village and up terraced hillsides with river views below.",
+        "afternoon": "Arrive at Ghandruk — a beautiful stone-paved Gurung village at 1,940m with stunning views of Annapurna South and Machhapuchhre.",
+        "evening": "Gurung homestay dinner — dhido with gundruk, sel roti, and local raksi. Visit the Gurung Museum and learn about this proud mountain culture.",
+        "cost_usd": 35,
+        "transport": "Jeep + Trekking"
+      },
+      {
+        "day": 2,
+        "title": "Ghandruk to Chomrong",
+        "morning": "Trek through terraced farmland in the Modi Khola valley. Views of Annapurna South growing closer with every step.",
+        "afternoon": "Descend to the river crossing, then climb the famous Chomrong stone staircase (2,170m). Chomrong is the last major settlement before the Sanctuary.",
+        "evening": "Rest at a well-equipped teahouse. Excellent bakery in Chomrong for apple pie and cinnamon rolls. Prepare for entering the Annapurna Sanctuary tomorrow.",
+        "cost_usd": 30,
+        "transport": "Trekking"
+      },
+      {
+        "day": 3,
+        "title": "Into the Sanctuary — Bamboo to Deurali",
+        "morning": "Enter the Modi Khola gorge — the walls close in as you walk through dense bamboo forest. Cross streams on log bridges and climb steadily.",
+        "afternoon": "Pass through Himalaya Hotel and continue to Deurali (3,230m). The forest thins, replaced by rocky terrain and waterfalls cascading down cliffs.",
+        "evening": "Teahouse dinner with river sounds. The Annapurna Sanctuary gate is close — tomorrow you enter the amphitheater of the gods.",
+        "cost_usd": 30,
+        "transport": "Trekking"
+      },
+      {
+        "day": 4,
+        "title": "Machhapuchhre & Annapurna Base Camp",
+        "morning": "Trek to Machhapuchhre Base Camp (3,700m) — the sacred Fishtail peak towers directly above. The cirque of mountains around you is breathtaking.",
+        "afternoon": "Push on to Annapurna Base Camp (4,130m). Stand in the natural amphitheater surrounded by Annapurna I (8,091m), Annapurna South, Hiunchuli, and Gangapurna. Celebrate.",
+        "evening": "Sunset turns the peaks gold, then pink, then purple. One of the greatest mountain spectacles on Earth. Simple teahouse dinner at 4,130m.",
+        "cost_usd": 35,
+        "transport": "Trekking"
+      },
+      {
+        "day": 5,
+        "title": "ABC Sunrise & Descent to Bamboo",
+        "morning": "Sunrise at ABC — the peaks ignite in sequence as the sun crests the eastern ridge. Photograph the full 360-degree panorama of the Sanctuary. Linger as long as you can.",
+        "afternoon": "Begin descent. The return feels quicker — enjoy views you were too breathless to notice on the way up. Reach Bamboo lodge (2,310m) by late afternoon.",
+        "evening": "Hot dal bhat after a long descent day. The thicker air at lower altitude feels luxurious. Rest well.",
+        "cost_usd": 30,
+        "transport": "Trekking"
+      },
+      {
+        "day": 6,
+        "title": "Hot Springs at Jhinu & Return Trek",
+        "morning": "Trek from Bamboo to the Jhinu Danda hot springs — natural riverside pools perfect for soaking tired muscles after days of trekking. The reward you've earned.",
+        "afternoon": "Continue descent through Gurung villages, terraced fields, and forests back toward Nayapul. The trail is gentle and joyful on the return.",
+        "evening": "Final teahouse night. Celebrate with the best dal bhat of the trek and share stories with other trekkers heading in both directions.",
+        "cost_usd": 30,
+        "transport": "Trekking"
+      },
+      {
+        "day": 7,
+        "title": "Return to Pokhara",
+        "morning": "Final walk to Nayapul. Jeep back to Pokhara Lakeside. Hot shower, fresh clothes, and the feeling of accomplishment.",
+        "afternoon": "Lake fish lunch at a Lakeside restaurant. Optional: boat ride on Phewa Lake watching Machhapuchhre — the same peak you stood beneath two days ago.",
+        "evening": "Farewell dinner at a rooftop restaurant. Reflect on seven days in the Annapurna Sanctuary — the mountains are now part of you.",
+        "cost_usd": 45,
+        "transport": "Jeep + Walking"
+      }
+    ],
+    "total_cost_usd": 235,
+    "highlights": [
+      "Standing in the Annapurna Sanctuary amphitheater at 4,130m",
+      "Sunrise painting 8,000m peaks in gold and pink",
+      "Hot springs soak at Jhinu Danda",
+      "Gurung village hospitality and home-cooked dal bhat",
+      "Machhapuchhre (Fishtail Peak) from every angle"
+    ]
   }
 ]

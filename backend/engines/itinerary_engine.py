@@ -27,6 +27,19 @@ user_profiles = load_json('user_profiles.json')
 
 destinations_by_id = {d['id']: d for d in destinations}
 
+
+def get_interest_description(dest, user_interests):
+    """Return the best matching interest-specific description for a destination."""
+    interest_descs = dest.get('interest_descriptions', {})
+    if not interest_descs:
+        return dest.get('description', '')
+    # Find first matching interest
+    for interest in user_interests:
+        if interest in interest_descs:
+            return interest_descs[interest]
+    # Fallback to generic
+    return dest.get('description', '')
+
 ml_model = None
 model_path = os.path.join(MODELS_DIR, 'itinerary_model.pkl')
 if os.path.exists(model_path):
@@ -170,15 +183,18 @@ def build_itinerary_from_template(template, selected_dests, user_profile):
 def build_fallback_itinerary(selected_dests, user_profile):
     daily_plan = []
     day_num = 1
+    user_interests = user_profile.get('interests', [])
 
     for dest in selected_dests:
+        # Pick the best interest-specific description
+        desc = get_interest_description(dest, user_interests)
         for d in range(dest['min_days']):
             if day_num > user_profile['duration_days']:
                 break
             daily_plan.append({
                 'day': day_num,
                 'title': f"Exploring {dest['name']} — Day {d + 1}",
-                'morning': f"Morning exploration of {dest['name']}. Visit key attractions and enjoy the local atmosphere.",
+                'morning': f"Morning exploration of {dest['name']}. {desc[:150]}",
                 'afternoon': f"Afternoon activities in {dest['name']}. Discover hidden corners and interact with locals.",
                 'evening': f"Evening in {dest['name']}. Enjoy local cuisine and reflect on the day's adventures.",
                 'cost_usd': max(30, dest['avg_cost_usd'] // dest['min_days']),
@@ -301,6 +317,20 @@ def generate_itinerary(user_profile):
     dest_ids = result['destinations_used']
     confidence = get_ml_confidence(user_profile, dest_ids)
     result['confidence_score'] = confidence
+
+    # Add interest-specific destination descriptions
+    user_interests = user_profile.get('interests', [])
+    dest_details = []
+    for d in selected_dests:
+        dest_details.append({
+            'id': d['id'],
+            'name': d['name'],
+            'description': get_interest_description(d, user_interests),
+            'type': d['type'],
+            'difficulty': d['difficulty'],
+            'region': d['region'],
+        })
+    result['destination_details'] = dest_details
 
     result = ai_enhance_itinerary(result, user_profile)
 

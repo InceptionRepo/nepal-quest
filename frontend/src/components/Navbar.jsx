@@ -42,12 +42,7 @@ export default function Navbar({ onLogoClick, currentView, onNavigate }) {
             })}
           </div>
 
-          <div className="flex items-center gap-3">
-            <span className="hidden sm:inline-block text-xs bg-purple-500/10 text-purple-300 font-semibold px-3 py-1 rounded-full border border-purple-500/20">
-              AI Hackathon 2026
-            </span>
-            <span className="text-lg" role="img" aria-label="Nepal flag">🇳🇵</span>
-          </div>
+          <div className="flex items-center gap-3" />
         </div>
       </div>
     </nav>
