@@ -1,0 +1,366 @@
+[
+  {
+    "id": "ITIN_KTM3",
+    "title": "3-Day Kathmandu Heritage Immersion",
+    "duration_days": 3,
+    "interest_tags": ["heritage", "spiritual", "food"],
+    "budget_range": "low",
+    "fitness_level": 1,
+    "destinations": ["KTM"],
+    "daily_plan": [
+      {
+        "day": 1,
+        "title": "Ancient Durbar Squares & Sacred Temples",
+        "morning": "Visit Kathmandu Durbar Square — explore Hanuman Dhoka palace, the living goddess Kumari's residence, and Kasthamandap temple that gave Kathmandu its name.",
+        "afternoon": "Walk through the narrow alleys of Asan and Indra Chowk bazaars. Try local street food — chatamari (Newari pizza) and juju dhau (king yogurt) from clay pots.",
+        "evening": "Witness the evening aarti ceremony at Pashupatinath Temple on the banks of the Bagmati River. Watch the cremation ghats and sadhus in meditation.",
+        "cost_usd": 40,
+        "transport": "Walking + Local bus"
+      },
+      {
+        "day": 2,
+        "title": "Buddhist Heritage & Panoramic Views",
+        "morning": "Climb the 365 steps to Swayambhunath (Monkey Temple) at sunrise for panoramic views of the entire Kathmandu Valley. Spin the massive prayer wheels.",
+        "afternoon": "Explore Boudhanath Stupa — the largest spherical stupa in Nepal. Join monks in the kora (circumambulation) walk and visit small Tibetan monasteries surrounding the stupa.",
+        "evening": "Dinner in Thamel district — try traditional Newari feast (samay baji) at a heritage restaurant. Explore the vibrant nightlife and live music scene.",
+        "cost_usd": 45,
+        "transport": "Taxi"
+      },
+      {
+        "day": 3,
+        "title": "Patan's Artisan Legacy",
+        "morning": "Visit Patan Durbar Square — admire the stone Krishna Mandir, golden Patan Museum (Nepal's finest museum), and intricate Newari woodcarvings on every temple strut.",
+        "afternoon": "Explore the Patan metalworking quarter where artisans still cast bronze Buddha statues using the lost-wax method passed down for centuries. Buy authentic handicrafts.",
+        "evening": "Sunset at Bhaktapur's Nyatapola Temple if time permits, or farewell dinner at a rooftop restaurant overlooking the Kathmandu skyline.",
+        "cost_usd": 50,
+        "transport": "Local bus + Walking"
+      }
+    ],
+    "total_cost_usd": 135,
+    "highlights": [
+      "Seven UNESCO World Heritage Sites in one valley",
+      "Authentic Newari street food tour",
+      "Evening aarti at Pashupatinath",
+      "Sunrise at Swayambhunath",
+      "Traditional metalworking demonstration in Patan"
+    ]
+  },
+  {
+    "id": "ITIN_PKR5",
+    "title": "5-Day Pokhara Adventure Escape",
+    "duration_days": 5,
+    "interest_tags": ["adventure", "trekking", "relaxation"],
+    "budget_range": "medium",
+    "fitness_level": 2,
+    "destinations": ["PKR"],
+    "daily_plan": [
+      {
+        "day": 1,
+        "title": "Lakeside Arrival & Sunset Views",
+        "morning": "Arrive in Pokhara by tourist bus or flight. Check in at a Lakeside hotel with mountain views. Rest and adjust to the relaxed vibe.",
+        "afternoon": "Hire a colorful boat on Phewa Lake and row to Tal Barahi Temple on the island. Enjoy the reflections of Machhapuchhre (Fishtail Peak) in the water.",
+        "evening": "Walk the Lakeside promenade, browse shops, and enjoy wood-fired pizza or Thakali thali at a rooftop restaurant watching the sunset over the Annapurna range.",
+        "cost_usd": 55,
+        "transport": "Tourist bus"
+      },
+      {
+        "day": 2,
+        "title": "Paragliding Over the Himalayas",
+        "morning": "Drive to Sarangkot for a tandem paragliding flight (30-minute) soaring above Phewa Lake with a 360-degree panorama of Annapurna, Dhaulagiri, and Machhapuchhre peaks.",
+        "afternoon": "Visit the International Mountain Museum to learn about Himalayan mountaineering history. See climbing gear from historic expeditions.",
+        "evening": "Try Pokhara's famous fish from the lake — grilled rainbow trout — at a Lakeside restaurant. Optional: visit a jazz bar.",
+        "cost_usd": 95,
+        "transport": "Taxi"
+      },
+      {
+        "day": 3,
+        "title": "Poon Hill Sunrise Trek — Day 1",
+        "morning": "Drive to Nayapul and begin the trek to Tikhedhunga through terraced rice paddies and Magar villages. Gradual uphill through subtropical forest.",
+        "afternoon": "Continue climbing stone steps to Ulleri (2,070m). Tough staircase but rewarded with mountain views. Arrive at Ghorepani by late afternoon.",
+        "evening": "Rest at a teahouse lodge. Hot dal bhat dinner and early sleep for the 4:30 AM sunrise wake-up call.",
+        "cost_usd": 40,
+        "transport": "Jeep + Trekking"
+      },
+      {
+        "day": 4,
+        "title": "Poon Hill Sunrise & Return",
+        "morning": "Wake at 4:30 AM and hike 45 minutes to Poon Hill (3,210m) for one of Nepal's most famous sunrises — golden light illuminating Dhaulagiri, Annapurna South, and Machhapuchhre.",
+        "afternoon": "Descend through rhododendron forests (spectacular if visiting Mar-Apr when they bloom in red and pink). Pass through Birethanti village back to Nayapul.",
+        "evening": "Return to Pokhara Lakeside. Celebrate with a well-earned steak dinner and cold beer at a Lakeside grill.",
+        "cost_usd": 45,
+        "transport": "Trekking + Jeep"
+      },
+      {
+        "day": 5,
+        "title": "Caves, Falls & Farewell",
+        "morning": "Visit Davis Falls (Patale Chhango) — a waterfall that disappears into an underground tunnel. Then explore the adjacent Gupteshwor Mahadev cave with its stalactites and hidden Shiva shrine.",
+        "afternoon": "Zip-line adventure (one of the world's longest at 1.8 km) or a peaceful yoga session at a Lakeside studio. Last-minute shopping for Tibetan singing bowls.",
+        "evening": "Farewell dinner at a rooftop restaurant with live Nepali folk music. Watch Machhapuchhre turn pink in the alpenglow.",
+        "cost_usd": 70,
+        "transport": "Taxi"
+      }
+    ],
+    "total_cost_usd": 305,
+    "highlights": [
+      "Paragliding with Himalayan panorama",
+      "Poon Hill sunrise at 3,210m",
+      "Boating on Phewa Lake",
+      "World's longest zip-line",
+      "Thakali cuisine experience"
+    ]
+  },
+  {
+    "id": "ITIN_EBC14",
+    "title": "14-Day Everest Base Camp Trek",
+    "duration_days": 14,
+    "interest_tags": ["trekking", "adventure", "spiritual"],
+    "budget_range": "high",
+    "fitness_level": 3,
+    "destinations": ["KTM", "EBC"],
+    "daily_plan": [
+      {
+        "day": 1,
+        "title": "Arrival in Kathmandu",
+        "morning": "Arrive in Kathmandu. Transfer to Thamel hotel. Gear check and last-minute equipment shopping at the many trekking shops.",
+        "afternoon": "Visit the Nepal Mountaineering Association for permits. Brief tour of Boudhanath Stupa for pre-trek blessings.",
+        "evening": "Team dinner and trek briefing with guide. Early rest for the early morning flight.",
+        "cost_usd": 60,
+        "transport": "Airport taxi"
+      },
+      {
+        "day": 2,
+        "title": "Flight to Lukla & Trek to Phakding",
+        "morning": "Scenic 35-minute flight from Kathmandu to Lukla (2,860m) — one of the world's most thrilling airport landings on a mountain cliff runway.",
+        "afternoon": "Begin trekking the Everest trail. Descend through pine forest to Phakding (2,610m) along the Dudh Koshi river. Easy 3-hour walk to acclimatize.",
+        "evening": "First night in a Sherpa teahouse. Hot tea, dal bhat, and sharing stories with fellow trekkers from around the world.",
+        "cost_usd": 180,
+        "transport": "Flight + Trekking"
+      },
+      {
+        "day": 3,
+        "title": "Trek to Namche Bazaar",
+        "morning": "Cross suspension bridges over the Dudh Koshi river. Steep uphill climb through forest. First glimpse of Everest from a clearing if skies are clear.",
+        "afternoon": "Arrive at Namche Bazaar (3,440m) — the bustling Sherpa capital carved into a mountain amphitheatre. Explore its colorful market and bakeries.",
+        "evening": "Enjoy apple pie at a famous Namche bakery. Visit the Sherpa Culture Museum to understand the people who call these mountains home.",
+        "cost_usd": 75,
+        "transport": "Trekking"
+      },
+      {
+        "day": 4,
+        "title": "Acclimatization Day in Namche",
+        "morning": "Hike up to the Everest View Hotel (3,880m) for a stunning panorama of Everest, Lhotse, and Ama Dablam. Return to Namche for lunch.",
+        "afternoon": "Explore Namche market day (Saturday). Visit the national park headquarters and mountaineering exhibition. Rest and hydrate.",
+        "evening": "Watch a documentary about Everest at one of Namche's lodges. Write in your trek journal.",
+        "cost_usd": 50,
+        "transport": "Trekking"
+      },
+      {
+        "day": 5,
+        "title": "Trek to Tengboche",
+        "morning": "Descend to the Dudh Koshi valley, then climb steadily through rhododendron forest with Ama Dablam towering ahead.",
+        "afternoon": "Arrive at Tengboche Monastery (3,867m), the most important monastery in the Khumbu. Visit the monastery interior if open for visitors.",
+        "evening": "If timing is right, attend the monks' evening prayer chanting ceremony. Spectacular sunset views of Everest and Ama Dablam.",
+        "cost_usd": 65,
+        "transport": "Trekking"
+      },
+      {
+        "day": 6,
+        "title": "Trek to Dingboche",
+        "morning": "Continue up-valley through thinning forest. Cross to the Imja Khola side valley toward Dingboche.",
+        "afternoon": "Arrive at Dingboche (4,410m). Feel the altitude — walk slowly, drink plenty of water. The landscape becomes stark and high-desert like.",
+        "evening": "Rest and acclimatize. Simple teahouse dinner. Play cards with fellow trekkers in the dining room warmed by a yak-dung stove.",
+        "cost_usd": 60,
+        "transport": "Trekking"
+      },
+      {
+        "day": 7,
+        "title": "Acclimatization Day in Dingboche",
+        "morning": "Hike up Nagarjun Hill (5,100m) for an incredible 360-degree panorama. Views of Makalu, Island Peak, and Lhotse south face.",
+        "afternoon": "Return to Dingboche. Rest, read, and hydrate. Monitor for any altitude sickness symptoms.",
+        "evening": "Early dinner and sleep. The next days are the most challenging and rewarding of the trek.",
+        "cost_usd": 50,
+        "transport": "Trekking"
+      },
+      {
+        "day": 8,
+        "title": "Trek to Lobuche",
+        "morning": "Trek along the lateral moraine of the Khumbu Glacier. Pass the memorial cairns for fallen climbers at Thukla Pass.",
+        "afternoon": "Arrive at Lobuche (4,940m). Barren, rocky landscape with massive glaciers and towering peaks on every side.",
+        "evening": "Early dinner. Temperatures drop well below freezing. Bundle up in your sleeping bag and rest for the big day tomorrow.",
+        "cost_usd": 65,
+        "transport": "Trekking"
+      },
+      {
+        "day": 9,
+        "title": "Everest Base Camp!",
+        "morning": "Early start for Gorak Shep (5,164m). Drop bags and continue to Everest Base Camp (5,364m). Walk on the Khumbu Glacier moraine.",
+        "afternoon": "Reach EBC! Stand where legendary expeditions began. See the Khumbu Icefall glittering above. Take photos with the iconic EBC sign. Return to Gorak Shep.",
+        "evening": "Celebration dinner at Gorak Shep. You made it to the roof of the world's doorstep. Share stories of the achievement.",
+        "cost_usd": 70,
+        "transport": "Trekking"
+      },
+      {
+        "day": 10,
+        "title": "Kala Patthar Sunrise & Descent",
+        "morning": "Pre-dawn climb to Kala Patthar (5,545m) — the best viewpoint for Everest's full pyramid peak lit by golden sunrise. The highest point of the trek.",
+        "afternoon": "Descend rapidly to Pheriche (4,371m). Enjoy the thicker air and warmer temperatures. Your body rewards you with energy.",
+        "evening": "Comfortable teahouse in Pheriche. Reflect on the achievement over hot chocolate.",
+        "cost_usd": 60,
+        "transport": "Trekking"
+      },
+      {
+        "day": 11,
+        "title": "Trek to Namche Bazaar",
+        "morning": "Continue descent through Tengboche and down to Namche. Enjoy the views you were too breathless to appreciate on the way up.",
+        "afternoon": "Arrive in Namche. Hot shower (finally!). Shop for souvenirs — Sherpa crafts, prayer flags, and trekking gear at bargain prices.",
+        "evening": "Celebration dinner at the best restaurant in Namche. Yak steak and local Everest beer.",
+        "cost_usd": 55,
+        "transport": "Trekking"
+      },
+      {
+        "day": 12,
+        "title": "Trek to Lukla",
+        "morning": "Final day of trekking. Descend through familiar villages and across swinging bridges back to Lukla.",
+        "afternoon": "Arrive in Lukla. Pack bags for the flight. Explore the small town and buy last-minute gifts.",
+        "evening": "Farewell dinner with guide and porter team. Exchange contacts and share photos. Tipping ceremony for the crew.",
+        "cost_usd": 55,
+        "transport": "Trekking"
+      },
+      {
+        "day": 13,
+        "title": "Fly Back to Kathmandu",
+        "morning": "Morning flight back to Kathmandu (weather permitting — always have a buffer day). Scenic mountain views from the plane one last time.",
+        "afternoon": "Check in to a comfortable Thamel hotel. Long hot shower and fresh clothes. Visit a spa for a well-deserved massage.",
+        "evening": "Celebration dinner at a fine-dining Nepali restaurant. Try the Nepali tasting menu with local raksi (millet wine).",
+        "cost_usd": 200,
+        "transport": "Flight + Taxi"
+      },
+      {
+        "day": 14,
+        "title": "Kathmandu Exploration & Departure",
+        "morning": "Last-minute sightseeing — Patan Durbar Square or Swayambhunath if not yet visited. Final souvenir shopping in Thamel.",
+        "afternoon": "Pack and prepare for departure. Transfer to Tribhuvan International Airport.",
+        "evening": "Depart Nepal with memories of a lifetime and a deep connection to the highest mountains on Earth.",
+        "cost_usd": 80,
+        "transport": "Taxi"
+      }
+    ],
+    "total_cost_usd": 1125,
+    "highlights": [
+      "Standing at Everest Base Camp at 5,364m",
+      "Kala Patthar sunrise — best Everest view",
+      "Lukla mountain runway landing",
+      "Tengboche monastery prayer ceremony",
+      "Sherpa culture and hospitality"
+    ]
+  },
+  {
+    "id": "ITIN_HID10",
+    "title": "10-Day Hidden Nepal — Rara & Upper Mustang",
+    "duration_days": 10,
+    "interest_tags": ["hidden_gems", "trekking", "heritage", "spiritual"],
+    "budget_range": "high",
+    "fitness_level": 2,
+    "destinations": ["KTM", "RRA", "MUS"],
+    "daily_plan": [
+      {
+        "day": 1,
+        "title": "Kathmandu — Gateway to Hidden Nepal",
+        "morning": "Arrive in Kathmandu. Briefing at trekking agency for permits and logistics. Rara requires a special restricted area permit.",
+        "afternoon": "Explore the hidden corners of Kathmandu — visit the living Kumari of Patan, the secret garden of Garden of Dreams, and the forgotten Itum Bahal monastery.",
+        "evening": "Welcome dinner featuring dishes from western Nepal — dhido (buckwheat porridge) and gundruk (fermented greens). Briefing for Rara flight.",
+        "cost_usd": 80,
+        "transport": "Taxi"
+      },
+      {
+        "day": 2,
+        "title": "Flight to Talcha & Trek Toward Rara",
+        "morning": "Morning flight from Kathmandu to Talcha airstrip in Mugu district. Dramatic landing in Nepal's remote far-west. Meet local guide.",
+        "afternoon": "Begin trek through pristine forest of blue pine, spruce, and juniper. Pass through Thakuri and Magar villages. Gentle climb on forest trails.",
+        "evening": "Camp or stay at basic lodge in Jhyari village. Home-cooked dal bhat with wild herbs. Stars like you've never seen.",
+        "cost_usd": 200,
+        "transport": "Flight + Trekking"
+      },
+      {
+        "day": 3,
+        "title": "Arrival at Rara Lake",
+        "morning": "Continue trek through alpine meadows carpeted with wildflowers (in season). The air is crisp and utterly silent — no traffic, no crowds.",
+        "afternoon": "First view of Rara Lake — an impossibly turquoise mirror reflecting snow-capped peaks. Walk along the lakeshore through a canopy of walnut trees.",
+        "evening": "Set up camp on the lakeshore. Watch the sunset paint the lake gold and pink. Listen to the haunting calls of whooper swans.",
+        "cost_usd": 100,
+        "transport": "Trekking"
+      },
+      {
+        "day": 4,
+        "title": "Full Day at Rara Lake",
+        "morning": "Circumnavigate Rara Lake on the 14 km trail. Visit the ancient Rara Devi temple and Magar settlement on the far shore.",
+        "afternoon": "Picnic lunch by the lake. Birdwatching — spot Danphe (Himalayan monal, Nepal's national bird), coots, and eagles.",
+        "evening": "Campfire stories with local guides. Learn about the Rara legend — locals say the lake was formed from the tears of a goddess.",
+        "cost_usd": 80,
+        "transport": "Trekking"
+      },
+      {
+        "day": 5,
+        "title": "Return Trek & Flight to Nepalgunj",
+        "morning": "Trek back to Talcha airstrip through different ridge trail with mountain panoramas.",
+        "afternoon": "Flight from Talcha to Nepalgunj (lowland transit town). Brief stop, then connecting flight or overnight stay.",
+        "evening": "If overnighting in Nepalgunj, explore the Tharu market and try local fish curry. Prepare for Pokhara/Jomsom transit.",
+        "cost_usd": 190,
+        "transport": "Trekking + Flight"
+      },
+      {
+        "day": 6,
+        "title": "Transit to Jomsom — Gateway to Mustang",
+        "morning": "Flight from Pokhara (or Nepalgunj via Kathmandu connection) to Jomsom along the deepest gorge in the world between Dhaulagiri and Annapurna.",
+        "afternoon": "Arrive in Jomsom. Explore the windswept Kali Gandaki riverbed. Visit the Mustangi apple orchards and try apple brandy.",
+        "evening": "Stay at a traditional Thakali lodge. Incredible Thakali set meal — the best regional cuisine in Nepal.",
+        "cost_usd": 180,
+        "transport": "Flight"
+      },
+      {
+        "day": 7,
+        "title": "Jomsom to Kagbeni — Border of Forbidden Kingdom",
+        "morning": "Trek north along the Kali Gandaki to Kagbeni — the ancient checkpoint town at the entrance to Upper Mustang. Enter a different world.",
+        "afternoon": "Explore Kagbeni's medieval alleys. Visit the 500-year-old Kag Chode Thupten Samphel Ling monastery perched on the cliff edge.",
+        "evening": "Stay in a traditional Mustangi house. Yak butter tea and tsampa (roasted barley flour). Wind howls outside as you sit by the fire.",
+        "cost_usd": 90,
+        "transport": "Trekking"
+      },
+      {
+        "day": 8,
+        "title": "Upper Mustang — Caves & Red Cliffs",
+        "morning": "Continue north through the red, ochre, and grey desert landscape. Visit the sky caves of Chhoser — ancient cliff dwellings 50 meters up sheer rock faces.",
+        "afternoon": "Trek through Dhakmar village with its stunning red cliffs. According to legend, the red color is the blood of a demon slain by Guru Rinpoche.",
+        "evening": "Stay at Ghami village. Visit the longest mani wall in Nepal — a 500-meter wall of carved prayer stones.",
+        "cost_usd": 95,
+        "transport": "Trekking + Jeep"
+      },
+      {
+        "day": 9,
+        "title": "Lo Manthang — The Walled City",
+        "morning": "Arrive at Lo Manthang (3,840m) — the walled capital of the ancient Kingdom of Lo. Enter through the single gate in the massive mud-brick walls.",
+        "afternoon": "Explore inside the walled city — the Raja's palace, Thubchen Gompa with its priceless 15th-century frescoes, Jampa Gompa's massive clay Buddha statue.",
+        "evening": "Attend a Tibetan Buddhist ceremony if one is being held. Experience the living culture of a kingdom that time forgot.",
+        "cost_usd": 110,
+        "transport": "Trekking"
+      },
+      {
+        "day": 10,
+        "title": "Return via Jomsom & Fly to Pokhara",
+        "morning": "Begin the return journey south to Jomsom by jeep (8 hours through dramatic desert canyon scenery).",
+        "afternoon": "Catch late afternoon flight from Jomsom to Pokhara, or overnight in Jomsom if needed.",
+        "evening": "Arrive back in Pokhara or Kathmandu. Farewell dinner celebrating an extraordinary journey to Nepal's hidden frontiers.",
+        "cost_usd": 175,
+        "transport": "Jeep + Flight"
+      }
+    ],
+    "total_cost_usd": 1300,
+    "highlights": [
+      "Rara Lake — Nepal's largest and most remote lake",
+      "Walled city of Lo Manthang in Upper Mustang",
+      "Ancient sky caves of Chhoser",
+      "Zero tourist crowds on the entire route",
+      "Living Tibetan Buddhist culture in Mustang"
+    ]
+  }
+]

@@ -1,0 +1,212 @@
+[
+  {
+    "id": "EBC",
+    "name": "Everest Base Camp",
+    "region": "Khumbu",
+    "type": "trekking",
+    "lat": 28.0025,
+    "lng": 86.8528,
+    "altitude_m": 5364,
+    "difficulty": "Hard",
+    "min_days": 12,
+    "avg_cost_usd": 1500,
+    "description": "The legendary trek to the foot of the world's highest peak. Journey through Sherpa villages, ancient monasteries, and breathtaking Himalayan landscapes to reach Everest Base Camp at 5,364 meters.",
+    "best_months": ["Mar", "Apr", "May", "Oct", "Nov"],
+    "tags": ["trekking", "adventure", "spiritual"],
+    "hidden_gem": false,
+    "crowd_score": {
+      "Jan": 2, "Feb": 3, "Mar": 6, "Apr": 8, "May": 7,
+      "Jun": 3, "Jul": 2, "Aug": 2, "Sep": 5, "Oct": 9,
+      "Nov": 8, "Dec": 3
+    }
+  },
+  {
+    "id": "PKR",
+    "name": "Pokhara",
+    "region": "Gandaki",
+    "type": "adventure",
+    "lat": 28.2096,
+    "lng": 83.9856,
+    "altitude_m": 827,
+    "difficulty": "Easy",
+    "min_days": 3,
+    "avg_cost_usd": 250,
+    "description": "Nepal's adventure capital nestled beside the tranquil Phewa Lake with stunning views of the Annapurna range. Enjoy paragliding, boating, and vibrant lakeside cafes.",
+    "best_months": ["Feb", "Mar", "Apr", "Oct", "Nov", "Dec"],
+    "tags": ["adventure", "relaxation", "food", "trekking"],
+    "hidden_gem": false,
+    "crowd_score": {
+      "Jan": 4, "Feb": 5, "Mar": 7, "Apr": 8, "May": 6,
+      "Jun": 3, "Jul": 2, "Aug": 3, "Sep": 5, "Oct": 9,
+      "Nov": 8, "Dec": 5
+    }
+  },
+  {
+    "id": "KTM",
+    "name": "Kathmandu Valley",
+    "region": "Bagmati",
+    "type": "heritage",
+    "lat": 27.7172,
+    "lng": 85.3240,
+    "altitude_m": 1400,
+    "difficulty": "Easy",
+    "min_days": 2,
+    "avg_cost_usd": 150,
+    "description": "The cultural heart of Nepal with seven UNESCO World Heritage Sites. Explore ancient temples, bustling markets, and centuries of Newari architecture in this vibrant capital valley.",
+    "best_months": ["Feb", "Mar", "Apr", "Oct", "Nov", "Dec"],
+    "tags": ["heritage", "spiritual", "food", "hidden_gems"],
+    "hidden_gem": false,
+    "crowd_score": {
+      "Jan": 4, "Feb": 6, "Mar": 7, "Apr": 8, "May": 6,
+      "Jun": 4, "Jul": 3, "Aug": 3, "Sep": 5, "Oct": 9,
+      "Nov": 8, "Dec": 5
+    }
+  },
+  {
+    "id": "CHT",
+    "name": "Chitwan National Park",
+    "region": "Narayani",
+    "type": "wildlife",
+    "lat": 27.5291,
+    "lng": 84.3542,
+    "altitude_m": 150,
+    "difficulty": "Easy",
+    "min_days": 3,
+    "avg_cost_usd": 200,
+    "description": "Nepal's premier wildlife sanctuary and UNESCO World Heritage Site. Home to one-horned rhinos, Bengal tigers, and over 500 species of birds in lush subtropical jungles.",
+    "best_months": ["Jan", "Feb", "Mar", "Apr", "Oct", "Nov", "Dec"],
+    "tags": ["wildlife", "adventure", "relaxation"],
+    "hidden_gem": false,
+    "crowd_score": {
+      "Jan": 5, "Feb": 6, "Mar": 7, "Apr": 7, "May": 4,
+      "Jun": 2, "Jul": 2, "Aug": 2, "Sep": 4, "Oct": 8,
+      "Nov": 7, "Dec": 5
+    }
+  },
+  {
+    "id": "LMB",
+    "name": "Lumbini",
+    "region": "Rupandehi",
+    "type": "spiritual",
+    "lat": 27.4833,
+    "lng": 83.2767,
+    "altitude_m": 150,
+    "difficulty": "Easy",
+    "min_days": 2,
+    "avg_cost_usd": 100,
+    "description": "The birthplace of Lord Buddha and a UNESCO World Heritage Site. Visit the sacred Maya Devi Temple, Ashoka Pillar, and monasteries built by Buddhist nations from around the world.",
+    "best_months": ["Jan", "Feb", "Mar", "Oct", "Nov", "Dec"],
+    "tags": ["spiritual", "heritage"],
+    "hidden_gem": false,
+    "crowd_score": {
+      "Jan": 4, "Feb": 5, "Mar": 6, "Apr": 6, "May": 5,
+      "Jun": 3, "Jul": 2, "Aug": 2, "Sep": 4, "Oct": 7,
+      "Nov": 6, "Dec": 5
+    }
+  },
+  {
+    "id": "RRA",
+    "name": "Rara Lake",
+    "region": "Karnali",
+    "type": "nature",
+    "lat": 29.5300,
+    "lng": 82.0800,
+    "altitude_m": 2990,
+    "difficulty": "Moderate",
+    "min_days": 5,
+    "avg_cost_usd": 600,
+    "description": "Nepal's largest and most pristine lake, hidden in the remote northwest. Crystal-clear turquoise waters surrounded by pine and juniper forests with almost no tourists — a true wilderness paradise.",
+    "best_months": ["Apr", "May", "Sep", "Oct", "Nov"],
+    "tags": ["hidden_gems", "trekking", "relaxation", "wildlife"],
+    "hidden_gem": true,
+    "crowd_score": {
+      "Jan": 1, "Feb": 1, "Mar": 2, "Apr": 3, "May": 3,
+      "Jun": 2, "Jul": 1, "Aug": 1, "Sep": 3, "Oct": 4,
+      "Nov": 3, "Dec": 1
+    }
+  },
+  {
+    "id": "MUS",
+    "name": "Upper Mustang",
+    "region": "Mustang",
+    "type": "heritage",
+    "lat": 29.1800,
+    "lng": 83.9600,
+    "altitude_m": 3840,
+    "difficulty": "Moderate",
+    "min_days": 8,
+    "avg_cost_usd": 1200,
+    "description": "The forbidden kingdom of Lo, a remote desert landscape resembling Tibet. Ancient cave monasteries, red-walled Lo Manthang city, and a living Tibetan Buddhist culture untouched by modernization.",
+    "best_months": ["Mar", "Apr", "May", "Jun", "Sep", "Oct"],
+    "tags": ["heritage", "hidden_gems", "trekking", "spiritual"],
+    "hidden_gem": true,
+    "crowd_score": {
+      "Jan": 1, "Feb": 1, "Mar": 3, "Apr": 4, "May": 5,
+      "Jun": 4, "Jul": 2, "Aug": 2, "Sep": 4, "Oct": 5,
+      "Nov": 3, "Dec": 1
+    }
+  },
+  {
+    "id": "BND",
+    "name": "Bandipur",
+    "region": "Tanahun",
+    "type": "heritage",
+    "lat": 27.9333,
+    "lng": 84.4167,
+    "altitude_m": 1030,
+    "difficulty": "Easy",
+    "min_days": 2,
+    "avg_cost_usd": 80,
+    "description": "A beautifully preserved hilltop Newari trading town frozen in time. Car-free cobbled streets, panoramic Himalayan views, mysterious Siddha Gufa cave, and warm hospitality make this a perfect hidden stop.",
+    "best_months": ["Feb", "Mar", "Apr", "Oct", "Nov", "Dec"],
+    "tags": ["heritage", "hidden_gems", "relaxation", "food"],
+    "hidden_gem": true,
+    "crowd_score": {
+      "Jan": 2, "Feb": 3, "Mar": 4, "Apr": 4, "May": 3,
+      "Jun": 2, "Jul": 1, "Aug": 1, "Sep": 3, "Oct": 5,
+      "Nov": 4, "Dec": 3
+    }
+  },
+  {
+    "id": "ILM",
+    "name": "Ilam Tea Gardens",
+    "region": "Mechi",
+    "type": "nature",
+    "lat": 26.9103,
+    "lng": 87.9264,
+    "altitude_m": 1200,
+    "difficulty": "Easy",
+    "min_days": 3,
+    "avg_cost_usd": 120,
+    "description": "Rolling emerald tea estates in Nepal's far east, reminiscent of Darjeeling. Sunrise over Kanchenjunga, fresh orthodox tea plucking, and the serene Mai Pokhari sacred lake await the adventurous traveler.",
+    "best_months": ["Mar", "Apr", "May", "Oct", "Nov"],
+    "tags": ["hidden_gems", "relaxation", "food", "wildlife"],
+    "hidden_gem": true,
+    "crowd_score": {
+      "Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4, "May": 3,
+      "Jun": 2, "Jul": 1, "Aug": 1, "Sep": 3, "Oct": 4,
+      "Nov": 3, "Dec": 2
+    }
+  },
+  {
+    "id": "ANN",
+    "name": "Annapurna Circuit",
+    "region": "Gandaki",
+    "type": "trekking",
+    "lat": 28.5960,
+    "lng": 83.8203,
+    "altitude_m": 5416,
+    "difficulty": "Hard",
+    "min_days": 10,
+    "avg_cost_usd": 900,
+    "description": "One of the world's greatest trekking routes, circling the Annapurna massif through rice paddies, rhododendron forests, high desert, and over the legendary Thorong La pass at 5,416 meters.",
+    "best_months": ["Mar", "Apr", "Oct", "Nov"],
+    "tags": ["trekking", "adventure", "spiritual"],
+    "hidden_gem": false,
+    "crowd_score": {
+      "Jan": 2, "Feb": 3, "Mar": 6, "Apr": 7, "May": 5,
+      "Jun": 2, "Jul": 1, "Aug": 1, "Sep": 4, "Oct": 9,
+      "Nov": 7, "Dec": 3
+    }
+  }
+]

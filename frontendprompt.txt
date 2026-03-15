@@ -1,0 +1,243 @@
+prompt for frontend 
+You are Claude. I’m building a new React UI for a project called “Nepal Quest” and I want the entire app to follow the same visual language as the provided “HeroSection (dark retro grid)” component below.
+
+Goal
+Create a modern, dark-first UI with subtle purple ambient glow, retro 3D grid background, gradient headline text, and a premium CTA button (conic-gradient ring + glassy button).
+Apply this same UI system across the whole Nepal Quest app (Home/Landing, Culture, Heatmap, Itinerary), but ONLY provide full code snippets for ONE landing page. For other pages: describe the structure/components to keep consistent.
+
+Constraints
+Must use shadcn/ui project structure + Tailwind CSS + TypeScript.
+Determine default paths for components and styles.
+If the shadcn default component path is NOT /components/ui, explain why it’s important to still create /components/ui and keep reusable UI components there (consistency, imports, discoverability, aligns with shadcn docs and community examples).
+Copy-paste the component code I provide exactly into /components/ui/hero-section-dark.tsx.
+Use lucide-react for icons.
+Use Unsplash images that are known to exist (stable URLs), as placeholders.
+
+Extracted color + style palette from the component (use these across the app)
+Ambient purple overlay: bg-purple-950/10
+Radial glow (light): rgba(120,119,198,0.15) fading to transparent
+Radial glow (dark): rgba(120,119,198,0.30) fading to transparent
+Headline gradient (light): linear-gradient(180deg, #000 0%, rgba(0,0,0,0.75) 100%)
+Headline gradient (dark): linear-gradient(180deg, #FFF 0%, rgba(255,255,255,0.00) 202.08%)
+Subtitle accent gradient:
+  - light: from-purple-600 to-pink-500
+  - dark: from-purple-300 to-orange-200
+CTA ring conic gradient: #E2CBFF → #393BB2 → #E2CBFF
+Neutrals (Tailwind): zinc, gray families; text gray-600/400/300, surfaces white / gray-950
+Grid lines (example from demo):
+  - lightLineColor #4a4a4a
+  - darkLineColor #2a2a2a
+Borders: subtle black/5 in light mode, white/5 in dark mode
+
+Tech + setup requirements (do not skip)
+1) Decide the stack:
+   - Prefer: Next.js (App Router) + TypeScript + Tailwind + shadcn/ui.
+   - Acceptable alternative: Vite + React + TS + Tailwind + shadcn/ui.
+2) If the repo doesn’t already support shadcn/Tailwind/TS, provide exact setup commands:
+   - Next.js option: create app with TS, add Tailwind, then run npx shadcn@latest init.
+   - Vite option: create Vite React TS, install Tailwind, then run npx shadcn@latest init.
+3) Determine/confirm these default paths (and enforce them in code):
+   - components: /components/ui (required)
+   - utilities: /lib/utils providing cn()
+   - global styles: /app/globals.css (Next) or /src/index.css (Vite)
+4) Install external deps:
+   - lucide-react
+
+Integration steps you must follow
+0) Copy-paste the provided component code exactly into /components/ui/hero-section-dark.tsx (update imports only if required by the chosen framework’s path aliases).
+1) Ensure @/ alias works (tsconfig paths for Vite or Next default).
+2) Add the minimal Tailwind animation/keyframes and any custom utility classes needed by the hero (animate-grid, font-geist if used).
+   - If you can’t guarantee a Geist font is installed, either:
+     a) add Geist via Next Font and map it to a Tailwind class, OR
+     b) replace font-geist with the default font-sans across the component, but keep the overall look.
+3) Create ONE landing page that uses this hero and matches the aesthetic.
+4) For the rest of the app pages (Culture, Heatmap, Itinerary), do NOT write full code; instead list which layout primitives and patterns to reuse so the UI stays consistent.
+
+Questions you must ask (and then proceed with reasonable defaults if unanswered)
+What data/props will be passed to the hero and other sections?
+Any specific state management requirements?
+Any required assets (logos, images)?
+Expected responsive behavior/breakpoints?
+Where should this hero live (home page only, or also on other pages)?
+
+Deliverables
+A) Setup instructions (commands) for the chosen stack.
+B) Folder structure showing where files go.
+C) Code snippets:
+   - /components/ui/hero-section-dark.tsx (exact copy from below)
+   - ONE landing page implementation (e.g., /app/page.tsx for Next.js) that uses the HeroSection and adds 1–2 additional sections (e.g., “Featured trails”, “Cultural highlights”) BUT keep styling consistent and minimal.
+D) Short guidance for other pages: Culture / Heatmap / Itinerary should reuse the same typography, gradients, card styling, borders, and spacing.
+
+=== COPY-PASTE COMPONENT (place at /components/ui/hero-section-dark.tsx) ===
+
+import * as React from "react"
+import { cn } from "@/lib/utils"
+import { ChevronRight } from "lucide-react"
+
+interface HeroSectionProps extends React.HTMLAttributes<HTMLDivElement> {
+  title?: string
+  subtitle?: {
+    regular: string
+    gradient: string
+  }
+  description?: string
+  ctaText?: string
+  ctaHref?: string
+  bottomImage?: {
+    light: string
+    dark: string
+  }
+  gridOptions?: {
+    angle?: number
+    cellSize?: number
+    opacity?: number
+    lightLineColor?: string
+    darkLineColor?: string
+  }
+}
+
+const RetroGrid = ({
+  angle = 65,
+  cellSize = 60,
+  opacity = 0.5,
+  lightLineColor = "gray",
+  darkLineColor = "gray",
+}) => {
+  const gridStyles = {
+    "--grid-angle": ${angle}deg,
+    "--cell-size": ${cellSize}px,
+    "--opacity": opacity,
+    "--light-line": lightLineColor,
+    "--dark-line": darkLineColor,
+  } as React.CSSProperties
+
+  return (
+    <div
+      className={cn(
+        "pointer-events-none absolute size-full overflow-hidden [perspective:200px]",
+        opacity-[var(--opacity)],
+      )}
+      style={gridStyles}
+    >
+      <div className="absolute inset-0 [transform:rotateX(var(--grid-angle))]">
+        <div className="animate-grid [background-image:linear-gradient(to_right,var(--light-line)_1px,transparent_0),linear-gradient(to_bottom,var(--light-line)_1px,transparent_0)] [background-repeat:repeat] [background-size:var(--cell-size)_var(--cell-size)] [height:300vh] [inset:0%_0px] [margin-left:-200%] [transform-origin:100%_0_0] [width:600vw] dark:[background-image:linear-gradient(to_right,var(--dark-line)_1px,transparent_0),linear-gradient(to_bottom,var(--dark-line)_1px,transparent_0)]" />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent to-90% dark:from-black" />
+    </div>
+  )
+}
+
+const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
+  (
+    {
+      className,
+      title = "Build products for everyone",
+      subtitle = {
+        regular: "Designing your projects faster with ",
+        gradient: "the largest figma UI kit.",
+      },
+      description = "Sed ut perspiciatis unde omnis iste natus voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.",
+      ctaText = "Browse courses",
+      ctaHref = "#",
+      bottomImage = {
+        light: "https://farmui.vercel.app/dashboard-light.png",
+        dark: "https://farmui.vercel.app/dashboard.png",
+      },
+      gridOptions,
+      ...props
+    },
+    ref,
+  ) => {
+    return (
+      <div className={cn("relative", className)} ref={ref} {...props}>
+        <div className="absolute top-0 z-[0] h-screen w-screen bg-purple-950/10 dark:bg-purple-950/10 bg-[radial-gradient(ellipse_20%80%_at_50%-20%,rgba(120,119,198,0.15),rgba(255,255,255,0))] dark:bg-[radial-gradient(ellipse_20%80%_at_50%-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
+        <section className="relative max-w-full mx-auto z-1">
+          <RetroGrid {...gridOptions} />
+          <div className="max-w-screen-xl z-10 mx-auto px-4 py-28 gap-12 md:px-8">
+            <div className="space-y-5 max-w-3xl leading-0 lg:leading-5 mx-auto text-center">
+              <h1 className="text-sm text-gray-600 dark:text-gray-400 group font-geist mx-auto px-5 py-2 bg-gradient-to-tr from-zinc-300/20 via-gray-400/20 to-transparent dark:from-zinc-300/5 dark:via-gray-400/5 border-[2px] border-black/5 dark:border-white/5 rounded-3xl w-fit">
+                {title}
+                <ChevronRight className="inline w-4 h-4 ml-2 group-hover:translate-x-1 duration-300" />
+              </h1>
+              <h2 className="text-4xl tracking-tighter font-geist bg-clip-text text-transparent mx-auto md:text-6xl bg-[linear-gradient(180deg,#000_0%,_rgba(0,_0,_0,_0.75)_100%)] dark:bg-[linear-gradient(180deg,#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
+                {subtitle.regular}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200">
+                  {subtitle.gradient}
+                </span>
+              </h2>
+              <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
+                {description}
+              </p>
+              <div className="items-center justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
+                <span className="relative inline-block overflow-hidden rounded-full p-[1.5px]">
+                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                  <div className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white dark:bg-gray-950 text-xs font-medium backdrop-blur-3xl">
+                    <a
+                      href={ctaHref}
+                      className="inline-flex rounded-full text-center group items-center w-full justify-center bg-gradient-to-tr from-zinc-300/20 via-purple-400/30 to-transparent dark:from-zinc-300/5 dark:via-purple-400/20 text-gray-900 dark:text-white border-input border-[1px] hover:bg-gradient-to-tr hover:from-zinc-300/30 hover:via-purple-400/40 hover:to-transparent dark:hover:from-zinc-300/10 dark:hover:via-purple-400/30 transition-all sm:w-auto py-4 px-10"
+                    >
+                      {ctaText}
+                    </a>
+                  </div>
+                </span>
+              </div>
+            </div>
+            {bottomImage && (
+              <div className="mt-32 mx-10 relative z-10">
+                <img
+                  src={bottomImage.light}
+                  className="w-full shadow-lg rounded-lg border border-gray-200 dark:hidden"
+                  alt="Dashboard preview"
+                />
+                <img
+                  src={bottomImage.dark}
+                  className="hidden w-full shadow-lg rounded-lg border border-gray-800 dark:block"
+                  alt="Dashboard preview"
+                />
+              </div>
+            )}
+          </div>
+        </section>
+      </div>
+    )
+  },
+)
+HeroSection.displayName = "HeroSection"
+
+export { HeroSection }
+
+=== DEMO USAGE (adapt for Nepal Quest landing page) ===
+
+import { HeroSection } from "@/components/ui/hero-section-dark"
+
+function HeroSectionDemo() {
+  return (
+    <HeroSection
+      title="Nepal Quest"
+      subtitle={{
+        regular: "Plan your journey through ",
+        gradient: "the Himalayas and beyond",
+      }}
+      description="Build an itinerary, explore cultural highlights, and visualize destinations with a heatmap—styled with the same premium dark UI." 
+      ctaText="Start planning"
+      ctaHref="/itinerary"
+      bottomImage={{
+        light: "https://images.unsplash.com/photo-1544735716-5b136d1f61f0?auto=format&fit=crop&w=2400&q=80",
+        dark: "https://images.unsplash.com/photo-1544735716-5b136d1f61f0?auto=format&fit=crop&w=2400&q=80",
+      }}
+      gridOptions={{
+        angle: 65,
+        opacity: 0.4,
+        cellSize: 50,
+        lightLineColor: "#4a4a4a",
+        darkLineColor: "#2a2a2a",
+      }}
+    />
+  )
+}
+export { HeroSectionDemo }
+
+Remember:
+Provide exact commands and file paths.
+Keep the rest of the app consistent with the palette and typography.
+Do not generate code snippets for every file—only for the landing page plus the hero component above.

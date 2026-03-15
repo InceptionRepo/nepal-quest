@@ -1,0 +1,140 @@
+[
+  {
+    "id": "PSP",
+    "name": "Pashupatinath Temple",
+    "location": "Kathmandu",
+    "lat": 27.7109,
+    "lng": 85.3487,
+    "type": "Hindu Temple",
+    "unesco": true,
+    "entry_fee_usd": {
+      "foreigner": 10.0,
+      "saarc": 2.5,
+      "nepali": 0.0
+    },
+    "best_visit_time": "Early morning (5-7 AM) for the morning aarti, or evening (6-7 PM) for the Sandhya Aarti ceremony along the Bagmati river ghats.",
+    "duration_hours": 2.5,
+    "story": "Pashupatinath is the most sacred Hindu temple in Nepal and one of the holiest Shiva temples in the world. The temple's origins stretch back to 400 AD, though legends place it much earlier. The main pagoda-style temple with its gilded roof and four silver-plated doors sits on the western bank of the sacred Bagmati River. Non-Hindus cannot enter the main temple, but the surrounding complex of 518 smaller temples, monuments, and ashrams is open to all visitors. The Arya Ghats alongside the river are where devout Hindus are cremated, their ashes committed to the holy waters. Rows of Shiva lingams line the riverbank, and sadhus — Hindu holy men smeared in ash and with matted dreadlocks — meditate in the temple courtyards. During the Maha Shivaratri festival, over a million devotees gather here for the most spectacular religious gathering in Nepal.",
+    "etiquette": [
+      "Remove shoes before entering any temple building or sacred platform area",
+      "Non-Hindus cannot enter the main Pashupatinath temple — respect the boundary and observe from the eastern bank",
+      "Always walk clockwise around temples and stupas (keeping the sacred structure to your right)",
+      "Ask permission before photographing sadhus — many expect a small donation of 100-200 NPR",
+      "Dress modestly covering shoulders and knees — this is an active place of worship, not a tourist attraction"
+    ],
+    "locals_secret": "Cross to the eastern bank of the Bagmati and climb up to the deer park behind the Guheswari temple. There's a hidden group of 6th-century carved Shiva lingams in the forest that almost no tourists find. The forest deer are considered sacred and are completely tame.",
+    "nearby_hidden": ["Guheswari Temple", "Gorakhnath Cave", "Jayabageshwori Temple"],
+    "tourists_visit": "Tourists typically visit the cremation ghats, take photos from the eastern bank, and see the main temple exterior. Most spend about 45 minutes.",
+    "locals_love": "Locals come for early morning puja at 5 AM when the temple is peaceful and spiritual. They visit the smaller Vasukinath and Unmatta Bhairav shrines that tourists walk right past, and families gather on the ghats for picnics on Ekadashi days."
+  },
+  {
+    "id": "BDN",
+    "name": "Boudhanath Stupa",
+    "location": "Kathmandu",
+    "lat": 27.7215,
+    "lng": 85.3620,
+    "type": "Buddhist Stupa",
+    "unesco": true,
+    "entry_fee_usd": {
+      "foreigner": 4.0,
+      "saarc": 1.5,
+      "nepali": 0.0
+    },
+    "best_visit_time": "Late afternoon (4-5 PM) when golden light bathes the stupa and monks begin their evening kora walk, or early morning (6 AM) for the serene chanting.",
+    "duration_hours": 2.0,
+    "story": "Boudhanath is one of the largest spherical stupas in the world and the spiritual heart of Tibetan Buddhism in Nepal. Built in the 5th century, the massive white dome rises 36 meters and is topped with a golden spire bearing the all-seeing eyes of Buddha gazing in four directions. After the 1959 Tibetan exodus, Boudhanath became the center of the Tibetan refugee community in Nepal, and today over 50 Tibetan Buddhist monasteries surround the stupa. Every evening, hundreds of monks in maroon robes, local Tibetans, and visitors join the kora — walking clockwise around the stupa while spinning prayer wheels and chanting mantras. The stupa was damaged in the 2015 earthquake but was beautifully restored with gold and copper donated by Buddhist communities worldwide, a testament to its enduring spiritual significance.",
+    "etiquette": [
+      "Always walk clockwise around the stupa — counter-clockwise is considered deeply disrespectful in Buddhist tradition",
+      "Spin the prayer wheels gently with your right hand in the direction they are designed to turn",
+      "Keep your voice low — many people are in prayer and meditation around the kora circuit",
+      "Do not climb on the stupa dome or sit on the monument steps with your feet pointing toward the stupa"
+    ],
+    "locals_secret": "On the third floor of the Shechen Monastery (northwest of the stupa), there's a tiny meditation room with original 16th-century wall paintings that survived the earthquake. Ask a monk politely and they may let you sit inside for a few minutes of silent meditation. Also, the best momo in Kathmandu is at a tiny unmarked Tibetan restaurant in the second alley north of the stupa.",
+    "nearby_hidden": ["Shechen Monastery", "Ka-Nying Monastery", "Kopan Monastery"],
+    "tourists_visit": "Most tourists do one loop of the kora, photograph the stupa from the rooftop restaurants, buy singing bowls, and leave within an hour.",
+    "locals_love": "Local Tibetans come daily for their evening kora, often completing 3-7 circuits while reciting thousands of mantras. They visit specific monasteries for teachings, attend butter lamp ceremonies at dawn, and gather at the stupa on full moon days for special pujas."
+  },
+  {
+    "id": "PTN",
+    "name": "Patan Durbar Square",
+    "location": "Lalitpur",
+    "lat": 27.6727,
+    "lng": 85.3252,
+    "type": "Palace Square",
+    "unesco": true,
+    "entry_fee_usd": {
+      "foreigner": 10.0,
+      "saarc": 3.0,
+      "nepali": 0.0
+    },
+    "best_visit_time": "Early morning (7-8 AM) before tour groups arrive, or late afternoon (4-5 PM) when golden light illuminates the temple carvings and local life resumes after the tourist rush.",
+    "duration_hours": 3.0,
+    "story": "Patan Durbar Square is the finest collection of Newari architecture in Nepal and arguably the most beautiful urban space in all of South Asia. The ancient city of Lalitpur (Patan) was one of three rival Malla kingdoms in the Kathmandu Valley, and its kings competed to build the most magnificent temples. The square is anchored by the Patan Palace with its stunning Sundari Chowk courtyard and Tushahity — an intricately carved royal bath considered the masterpiece of Newari stone art. The stone Krishna Mandir, built in 1637 in the Indian shikhara style, depicts scenes from the Mahabharata on every level. The Patan Museum inside the palace is Nepal's finest museum, housing a world-class collection of Hindu and Buddhist art displayed in beautifully restored palace rooms. Every strut and window in the square contains carved wooden figures of extraordinary detail and artistry.",
+    "etiquette": [
+      "Remove shoes before entering any temple that is still actively used for worship",
+      "Do not sit on temple platforms or steps during religious ceremonies — locals take this very seriously",
+      "Respect the Newari metalworkers and woodcarvers — do not interrupt their work for photos without asking",
+      "If visiting during a festival (like Rato Machhindranath), follow the local crowd and avoid blocking procession routes",
+      "Support local artisans by purchasing authentic handcrafted items rather than mass-produced souvenirs"
+    ],
+    "locals_secret": "Behind the Golden Temple (Hiranya Varna Mahavihar), there's a hidden inner courtyard with a 12th-century golden shrine that most guidebooks don't mention. Also, walk 5 minutes south to the Mahaboudha temple — a stunning building made entirely of terracotta tiles, each depicting a tiny Buddha image. The family workshop next door has been casting lost-wax bronze statues for 15 generations.",
+    "nearby_hidden": ["Mahaboudha Temple", "Rato Machhindranath Temple", "Rudra Varna Mahavihar"],
+    "tourists_visit": "Tourists take photos of the Krishna Mandir, quickly walk through the museum, and spend maybe 30 minutes photographing temples before moving on.",
+    "locals_love": "Newari locals gather at the square for daily socializing, festivals, and temple prayers. They worship at the tiny neighborhood shrines tucked behind temples, buy fresh vegetables from the morning market on the palace steps, and their children play cricket in the square at sunset."
+  },
+  {
+    "id": "SYM",
+    "name": "Swayambhunath (Monkey Temple)",
+    "location": "Kathmandu",
+    "lat": 27.7149,
+    "lng": 85.2903,
+    "type": "Buddhist Stupa",
+    "unesco": true,
+    "entry_fee_usd": {
+      "foreigner": 2.0,
+      "saarc": 0.5,
+      "nepali": 0.0
+    },
+    "best_visit_time": "Sunrise (5:30-6:30 AM) for the stunning panoramic view of Kathmandu Valley in morning mist and the peaceful chanting of monks without any tourists.",
+    "duration_hours": 1.5,
+    "story": "Swayambhunath sits atop a forested hill west of Kathmandu and is one of the oldest religious complexes in Nepal, dating back over 2,500 years. According to legend, the entire Kathmandu Valley was once a lake, and a lotus flower carrying a flame of divine light grew on the lake's surface. Manjushri, the Bodhisattva of wisdom, cut a gorge at Chobar to drain the lake and revealed the valley — and the light settled on this hilltop to become the Swayambhu stupa, the self-created one. Today, visitors climb 365 ancient stone steps guarded by pairs of garudas, lions, elephants, horses, and peacocks. The gilded stupa at the summit bears the watchful eyes of Buddha in four directions. Hundreds of chattering rhesus monkeys inhabit the forested hillside (earning its nickname Monkey Temple) and are considered holy, though they will steal your snacks without remorse.",
+    "etiquette": [
+      "Climb the eastern staircase (main 365 steps) — the western entrance is primarily for vehicles and misses the sacred guardian statues",
+      "Guard your belongings from the monkeys — they will grab water bottles, sunglasses, and food from your hands",
+      "Walk clockwise around the stupa and spin the large prayer wheels along the kora path",
+      "Do not touch or disturb the monkeys — in rare cases they may bite if provoked or cornered"
+    ],
+    "locals_secret": "On the north side of the hilltop, behind the large Pratappur temple, there's a tiny trail leading to a secluded garden with an ancient natural spring and a 1,000-year-old stone Shiva image. Almost no one goes there. Also, come on Buddha Jayanti (usually in May) for the most spectacular celebration with thousands of butter lamps.",
+    "nearby_hidden": ["Natural History Museum", "National Museum of Nepal", "Ichangu Narayan temple"],
+    "tourists_visit": "Most tourists climb the steps, take photos of the stupa and the monkeys, enjoy the view from the platform, and descend. Average visit is about 40 minutes.",
+    "locals_love": "Local Buddhists come for early morning prayers and kora well before tourists arrive. Newari families bring children for their rice-feeding ceremony (pasni) at the small shrines. Locals love the January celebration of Swasthani Bratakatha with storytelling circles on the hilltop."
+  },
+  {
+    "id": "LMT",
+    "name": "Lumbini — Birthplace of Buddha",
+    "location": "Rupandehi",
+    "lat": 27.4833,
+    "lng": 83.2767,
+    "type": "Sacred Garden",
+    "unesco": true,
+    "entry_fee_usd": {
+      "foreigner": 2.0,
+      "saarc": 0.5,
+      "nepali": 0.0
+    },
+    "best_visit_time": "Early morning (6-8 AM) when the sacred garden is misty and peaceful, and monks from the international monasteries are doing their morning practices.",
+    "duration_hours": 4.0,
+    "story": "Lumbini is the birthplace of Siddhartha Gautama, who became the Buddha, the Enlightened One, around 563 BCE. The sacred garden contains the Maya Devi Temple, built over the exact spot where Queen Maya Devi gave birth while grasping the branch of a sal tree. Inside the temple, a marker stone shows the precise nativity spot, and ancient ruins of monasteries and stupas dating back to the 3rd century BCE surround it. Emperor Ashoka visited in 249 BCE and erected a sandstone pillar that still stands — one of the oldest historical markers in South Asia. The larger Lumbini Development Zone spans 6 square kilometers and contains magnificent monasteries built by Buddhist nations including Myanmar, Thailand, China, Germany, France, and many others. Each monastery reflects its country's unique architectural style, creating an extraordinary open-air museum of world Buddhist architecture. A long central canal flanked by walking paths connects the sacred garden to the monasteries.",
+    "etiquette": [
+      "Remove shoes before entering the Maya Devi Temple and the sacred garden area",
+      "Maintain silence inside the Maya Devi Temple — this is one of the most sacred spots in Buddhism",
+      "Do not touch the Ashoka Pillar or the ancient ruins — they are extremely fragile and irreplaceable",
+      "Dress modestly and respectfully — many monks and pilgrims are in deep meditation throughout the grounds",
+      "Photography is not permitted inside the Maya Devi Temple"
+    ],
+    "locals_secret": "Rent a bicycle from a shop near the south gate and cycle the 6 km canal route between the monasteries — it's the best way to cover the huge complex. Most tourists miss the stunning Myanmar Golden Temple and the meditative Japanese Peace Pagoda at the far north end. In the sacred garden, look for the ancient Ashoka-era bathing pool where Maya Devi is said to have bathed before giving birth.",
+    "nearby_hidden": ["Tilaurakot (ancient Kapilvastu palace ruins)", "Kudan archaeological site", "Gotihawa Ashoka Pillar"],
+    "tourists_visit": "Most tourists visit the Maya Devi Temple, see the Ashoka Pillar, walk through 2-3 nearby monasteries, and leave in about 2 hours.",
+    "locals_love": "Buddhist pilgrims from across Asia spend entire days meditating in the sacred garden and visiting every monastery. Nepali families come for picnics along the canal on holidays. Local monks recommend the full moon night meditation at the eternal peace flame — a profoundly moving experience."
+  }
+]
