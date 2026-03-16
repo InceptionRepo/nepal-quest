@@ -34,7 +34,7 @@ const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
 const AGE_GROUPS = ['youth', 'adult', 'senior', 'family'];
 const STEP_LABELS = ['Duration', 'Interests', 'Fitness', 'Budget', 'When & Who'];
 
-export default function OnboardingForm({ onSubmit, loading }) {
+export default function OnboardingForm({ onSubmit, loading, aiRateLimited, theme = 'dark' }) {
   const [step, setStep] = useState(0);
   const [form, setForm] = useState({
     duration_days: 7,
@@ -68,16 +68,22 @@ export default function OnboardingForm({ onSubmit, loading }) {
   };
 
   return (
-    <div className="min-h-screen bg-gray-950 flex items-center justify-center px-4 py-8 relative">
+    <div className={theme === 'dark'
+      ? 'min-h-screen bg-gray-950 flex items-center justify-center px-4 py-8 relative'
+      : 'min-h-screen bg-slate-50 flex items-center justify-center px-4 py-8 relative'}>
       {/* Purple ambient glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[radial-gradient(ellipse_at_center,rgba(120,119,198,0.15),transparent_70%)] pointer-events-none" />
 
       <div className="w-full max-w-2xl relative z-10">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-[linear-gradient(180deg,#FFF_0%,rgba(255,255,255,0.4)_100%)] mb-2">
+          <h1 className={theme === 'dark'
+            ? 'text-3xl font-bold bg-clip-text text-transparent bg-[linear-gradient(180deg,#FFF_0%,rgba(255,255,255,0.4)_100%)] mb-2'
+            : 'text-3xl font-bold text-slate-900 mb-2'}>
             Plan Your Nepal Adventure
           </h1>
-          <p className="text-gray-400">Our AI will craft a personalized itinerary just for you</p>
+          <p className={theme === 'dark' ? 'text-gray-400' : 'text-slate-600'}>
+            Our AI will craft a personalized itinerary just for you
+          </p>
         </div>
 
         {/* Progress bar */}
@@ -101,7 +107,9 @@ export default function OnboardingForm({ onSubmit, loading }) {
           ))}
         </div>
 
-        <div className="bg-gray-900/80 backdrop-blur-sm rounded-xl border border-white/5 p-6 sm:p-8 glow-purple">
+        <div className={theme === 'dark'
+          ? 'bg-gray-900/80 backdrop-blur-sm rounded-xl border border-white/5 p-6 sm:p-8 glow-purple'
+          : 'bg-white/90 backdrop-blur-sm rounded-xl border border-slate-200 p-6 sm:p-8'}>
           {/* Step 1 — Duration */}
           {step === 0 && (
             <div>
@@ -266,7 +274,7 @@ export default function OnboardingForm({ onSubmit, loading }) {
                 <span className="relative flex items-center gap-2 text-white">Next <ChevronRight className="w-4 h-4" /></span>
               </button>
             ) : (
-              <button onClick={handleSubmit} disabled={!canNext() || loading}
+              <button onClick={handleSubmit} disabled={!canNext() || loading || aiRateLimited}
                 className="flex items-center gap-2 px-6 py-2.5 font-semibold rounded-xl disabled:opacity-40 disabled:cursor-not-allowed transition-all relative overflow-hidden group">
                 <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-500 group-hover:from-purple-500 group-hover:to-purple-400 transition-all" />
                 <span className="relative flex items-center gap-2 text-white">
@@ -279,6 +287,11 @@ export default function OnboardingForm({ onSubmit, loading }) {
               </button>
             )}
           </div>
+          {aiRateLimited && (
+            <p className="mt-3 text-[11px] text-amber-500 text-right">
+              You’ve hit the AI rate limit. Please wait about a minute before generating another itinerary.
+            </p>
+          )}
         </div>
       </div>
     </div>

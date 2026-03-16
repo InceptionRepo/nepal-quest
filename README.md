@@ -8,16 +8,24 @@ A full-stack web application with 3 AI engines for personalized Nepal travel pla
 - Takes user travel preferences and generates a complete day-by-day Nepal itinerary
 - Uses rule-based scoring system + Random Forest classifier
 - Tailored to duration, interests, fitness level, budget, and travel season
+- Requires sign-in (cookie-based auth)
 
 🗺️ **Engine 2 — Crowd & Season Predictor**
 - Predicts crowd density at Nepal destinations for any selected month
 - Color-coded interactive Leaflet.js map showing crowd levels
 - Monthly trend analysis powered by Random Forest regressor
+- Optional AI “tips” appear only when signed in
 
 🏛️ **Engine 3 — Cultural Heritage Storyteller**
 - Rich cultural stories and local secrets for 5 UNESCO World Heritage Sites
 - Etiquette tips, entry fees, and insider recommendations
 - Side-by-side "Tourists Visit vs Locals Love" comparison
+- Optional AI narrative appears only when signed in
+
+🤝 **Guide Marketplace (Requests + Chat)**
+- Travelers can send trip requests to a guide (or “any available guide”)
+- Guides can accept/claim requests
+- Once accepted, both sides get a request-scoped chat thread
 
 ## Tech Stack
 
@@ -26,6 +34,8 @@ A full-stack web application with 3 AI engines for personalized Nepal travel pla
 - scikit-learn for ML models
 - pandas, numpy for data handling
 - joblib for model persistence
+- Optional Azure OpenAI chat model for narrative enhancements (itineraries, crowd tips, heritage stories)
+- JWT auth stored in an HttpOnly cookie (no localStorage)
 
 **Frontend:**
 - React.js with functional components and hooks
@@ -51,11 +61,6 @@ A full-stack web application with 3 AI engines for personalized Nepal travel pla
 
 2. **Install Python dependencies:**
    ```bash
-   pip install flask flask-cors scikit-learn pandas numpy joblib
-   ```
-
-   *Alternative: use requirements.txt*
-   ```bash
    pip install -r requirements.txt
    ```
 
@@ -70,7 +75,24 @@ A full-stack web application with 3 AI engines for personalized Nepal travel pla
    - Save both models to `backend/models/` directory as `.pkl` files
    - Display training metrics and feature importances
 
-4. **Start the Flask backend server:**
+4. **(Optional) Enable AI narrative features:**
+
+   Create a `.env` file inside `backend/` if you want GPT-powered summaries, tips, and stories:
+
+   ```bash
+   AZURE_OPENAI_API_KEY=your_key_here
+   AZURE_OPENAI_ENDPOINT=https://your-endpoint.openai.azure.com/
+   # Use your Azure OpenAI *deployment name* here
+   AZURE_OPENAI_MODEL=your_deployment_name
+   AZURE_OPENAI_API_VERSION=2024-12-01-preview
+
+   # Recommended (auth)
+   JWT_SECRET=change-me
+   ```
+
+   If these are **not** set, the app will still work (ML + rules only).
+
+5. **Start the Flask backend server:**
    ```bash
    python app.py
    ```
@@ -101,22 +123,7 @@ Open a **new terminal** (keep the backend running in the first terminal).
 
    This installs React, Leaflet, Recharts, Tailwind CSS, and other dependencies.
 
-3. **OPTIONAL — Download Nepal Districts GeoJSON:**
-
-   The map works perfectly **without this file** (it will show destination pins on a plain OpenStreetMap).
-
-   If you want district boundary overlays:
-   ```bash
-   # Download the file to frontend/public/
-   curl -o public/nepal-districts.geojson https://raw.githubusercontent.com/mesaugat/gis-nepal/master/src/nepal-districts.geojson
-   ```
-
-   *Or manually download from:*
-   https://raw.githubusercontent.com/mesaugat/gis-nepal/master/src/nepal-districts.geojson
-
-   Save it as `frontend/public/nepal-districts.geojson`
-
-4. **Start the React development server:**
+3. **Start the React development server:**
    ```bash
    npm start
    ```
@@ -163,6 +170,17 @@ The browser will automatically open to http://localhost:3000
      - Transport methods and daily costs
      - Total trip cost in USD and NPR
      - Confidence score from AI model
+     - Clearly marked as “Hybrid AI”: ML ranking + optional GPT narrative layer
+
+3. **Sign In / Roles:**
+   - Use **Sign In** (navbar) to log in; the backend stores auth in an HttpOnly cookie named `nepalquest_token`.
+   - Travelers can open **My Requests** from the navbar menu.
+   - Guides can register via **Join as Guide** and then manage requests in **Guide Requests**.
+
+4. **Guide Requests + Chat:**
+   - Travelers can send a request (date range + message) to a specific guide or “any available guide”.
+   - When a guide accepts a request, the traveler’s status updates automatically (panel refresh/polling).
+   - Chat becomes available only after the request is **accepted** (or **completed**).
 
 3. **Heritage Sites:**
    - Click heritage site markers (Pashupatinath, Boudhanath, Patan, Swayambhunath, Lumbini)
@@ -171,6 +189,21 @@ The browser will automatically open to http://localhost:3000
 
 4. **Regenerate Itinerary:**
    - Click the "Regenerate" button to get a new itinerary with the same preferences
+
+## Simple Business Model (Hackathon Pitch)
+
+To keep the implementation lean while showing a viable product, NepalQuest can be positioned with a very simple tiering:
+
+- **Free Tier (what this repo implements):**
+  - Interactive crowd heatmap for key destinations.
+  - Basic ML-powered itinerary suggestions.
+  - Heritage stories for flagship sites.
+- **Pro Tier (roadmap, not yet coded):**
+  - More AI-enhanced itinerary generations per day.
+  - Export itineraries as PDF / shareable links for friends or clients.
+  - White-label dashboards and analytics for travel agencies and hotels.
+
+This keeps the code small and stable for the hackathon, while giving judges a clear path to monetization and B2B use.
 
 ## Project Structure
 
@@ -214,11 +247,22 @@ nepalquest/
 ## API Endpoints
 
 - `POST /api/itinerary` — Generate personalized itinerary
+- `POST /api/auth/register` — Register user or guide (auto-login)
+- `POST /api/auth/login` — Login (sets HttpOnly cookie)
+- `POST /api/auth/logout` — Logout (clears cookie)
+- `GET /api/auth/me` — Get current user (or null)
+- `GET /api/guides` — List guides (supports destination prioritization)
+- `POST /api/guide-requests` — Create a guide request (traveler)
+- `GET /api/guide-requests` — List requests (traveler: own, guide: incoming)
+- `PUT /api/guide-requests/{id}` — Update request status (guide)
+- `GET /api/guide-requests/{id}/messages` — Request chat messages (accepted/completed only)
+- `POST /api/guide-requests/{id}/messages` — Send a chat message
 - `GET /api/destinations` — Get all destinations (basic info)
 - `GET /api/crowd/all?month={1-12}` — Get crowd data for all destinations
 - `GET /api/crowd/{dest_id}?month={1-12}` — Get crowd detail for one destination
 - `GET /api/heritage` — List all heritage sites
 - `GET /api/heritage/{site_id}` — Get full heritage site details
+- `POST /api/leads` — Log a simple “lead created” analytics event (demo)
 
 ## Data Sources
 

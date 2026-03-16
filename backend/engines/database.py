@@ -55,6 +55,87 @@ def init_db():
         )
     """)
 
+    # Auth tables
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            email TEXT UNIQUE NOT NULL,
+            password_hash TEXT NOT NULL,
+            name TEXT NOT NULL,
+            role TEXT NOT NULL DEFAULT 'user' CHECK(role IN ('user', 'guide', 'admin')),
+            phone TEXT,
+            nationality TEXT,
+            bio TEXT,
+            experience_years INTEGER,
+            languages TEXT,
+            specialties TEXT,
+            hourly_rate_npr INTEGER,
+            is_verified INTEGER DEFAULT 0,
+            profile_photo_url TEXT,
+            is_active INTEGER DEFAULT 1,
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+            updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        )
+    """)
+
+    cursor.execute("""
+        CREATE INDEX IF NOT EXISTS idx_users_email ON users(email)
+    """)
+
+    cursor.execute("""
+        CREATE INDEX IF NOT EXISTS idx_users_role ON users(role)
+    """)
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS guide_requests (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id INTEGER NOT NULL REFERENCES users(id),
+            guide_id INTEGER REFERENCES users(id),
+            trip_title TEXT,
+            destination_ids TEXT,
+            start_date TEXT NOT NULL,
+            end_date TEXT NOT NULL,
+            group_size INTEGER DEFAULT 1,
+            message TEXT,
+            budget_range TEXT,
+            special_requirements TEXT,
+            status TEXT DEFAULT 'pending' CHECK(status IN ('pending', 'accepted', 'rejected', 'completed', 'cancelled')),
+            guide_response TEXT,
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+            updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        )
+    """)
+
+    cursor.execute("""
+        CREATE INDEX IF NOT EXISTS idx_guide_requests_user ON guide_requests(user_id)
+    """)
+
+    cursor.execute("""
+        CREATE INDEX IF NOT EXISTS idx_guide_requests_guide ON guide_requests(guide_id)
+    """)
+
+    cursor.execute("""
+        CREATE INDEX IF NOT EXISTS idx_guide_requests_status ON guide_requests(status)
+    """)
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS guide_request_messages (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            request_id INTEGER NOT NULL REFERENCES guide_requests(id) ON DELETE CASCADE,
+            sender_user_id INTEGER NOT NULL REFERENCES users(id),
+            body TEXT NOT NULL,
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        )
+    """)
+
+    cursor.execute("""
+        CREATE INDEX IF NOT EXISTS idx_grm_request_id ON guide_request_messages(request_id)
+    """)
+
+    cursor.execute("""
+        CREATE INDEX IF NOT EXISTS idx_grm_created_at ON guide_request_messages(created_at)
+    """)
+
     conn.commit()
     conn.close()
     print("[DB] Database initialized at", DB_PATH)

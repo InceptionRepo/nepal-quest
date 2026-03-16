@@ -1,13 +1,15 @@
 import React from 'react';
 import { X, Star, AlertTriangle, Clock, Award, Users, Heart, MapPin, Sparkles, Camera } from 'lucide-react';
 
-export default function HeritagePanel({ site, onClose }) {
+export default function HeritagePanel({ site, onClose, theme = 'dark' }) {
   if (!site) return null;
 
   return (
-    <div className="h-full flex flex-col bg-gray-950">
+    <div className={theme === 'dark' ? 'h-full flex flex-col bg-gray-950' : 'h-full flex flex-col bg-white'}>
       {/* Header */}
-      <div className="p-4 border-b border-white/5 bg-gradient-to-r from-purple-950/40 to-gray-950">
+      <div className={theme === 'dark'
+        ? 'p-4 border-b border-white/5 bg-gradient-to-r from-purple-950/40 to-gray-950'
+        : 'p-4 border-b border-slate-200 bg-gradient-to-r from-slate-50 to-purple-50'}>
         <div className="flex items-start justify-between mb-2">
           <div className="flex-1">
             <h2 className="text-lg font-bold text-white">{site.name}</h2>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { MapContainer, TileLayer, CircleMarker, Popup, GeoJSON, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, CircleMarker, Popup, useMap } from 'react-leaflet';
 import axios from 'axios';
-import { Eye, EyeOff } from 'lucide-react';
+import { Eye, EyeOff, X } from 'lucide-react';
 import CrowdChart from './CrowdChart';
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -31,7 +31,6 @@ function MapResizer() {
 
 export default function NepalMap({ onHeritageClick, selectedMonth, onMonthChange, heritageSiteIds }) {
   const [crowdData, setCrowdData] = useState([]);
-  const [geoData, setGeoData] = useState(null);
   const [showHiddenGems, setShowHiddenGems] = useState(false);
   const [selectedDest, setSelectedDest] = useState(null);
   const [crowdDetail, setCrowdDetail] = useState(null);
@@ -49,16 +48,6 @@ export default function NepalMap({ onHeritageClick, selectedMonth, onMonthChange
   useEffect(() => {
     fetchCrowd(monthNum);
   }, [monthNum, fetchCrowd]);
-
-  useEffect(() => {
-    fetch('/nepal-districts.geojson')
-      .then((res) => {
-        if (res.ok) return res.json();
-        return null;
-      })
-      .then((data) => { if (data) setGeoData(data); })
-      .catch(() => {});
-  }, []);
 
   const handleMarkerClick = async (dest) => {
     if (heritageSiteIds && heritageSiteIds.includes(dest.id)) {
@@ -82,16 +71,9 @@ export default function NepalMap({ onHeritageClick, selectedMonth, onMonthChange
     }
   };
 
-  const geoStyle = {
-    fillColor: '#1e293b',
-    weight: 1,
-    color: '#334155',
-    fillOpacity: 0.5,
-  };
-
   return (
     <div className="flex flex-col h-full bg-gray-950">
-      {/* Month selector */}
+      {/* Month selector + AI/ML label */}
       <div className="flex items-center gap-1 px-3 py-2 bg-gray-900/80 backdrop-blur-sm border-b border-white/5 overflow-x-auto">
         {MONTHS.map((m) => (
           <button key={m} onClick={() => onMonthChange(m)}
@@ -103,7 +85,13 @@ export default function NepalMap({ onHeritageClick, selectedMonth, onMonthChange
             {m}
           </button>
         ))}
-        <div className="ml-auto flex-shrink-0">
+        <div className="ml-3 flex flex-col flex-shrink-0 text-[10px] text-gray-500">
+          <span className="font-semibold uppercase tracking-wide">ML Crowd Engine</span>
+          <span className="text-[10px] text-gray-500">
+            Random Forest predictions + GPT tips per destination
+          </span>
+        </div>
+        <div className="ml-auto flex-shrink-0 pl-2">
           <button onClick={() => setShowHiddenGems(!showHiddenGems)}
             className={`flex items-center gap-1.5 px-3 py-1 text-xs font-semibold rounded-lg transition-all ${
               showHiddenGems
@@ -130,10 +118,9 @@ export default function NepalMap({ onHeritageClick, selectedMonth, onMonthChange
         >
           <MapResizer />
           <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            attribution='&copy; OpenStreetMap contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          {geoData && <GeoJSON data={geoData} style={geoStyle} />}
 
           {crowdData.map((dest) => {
             const isHidden = dest.hidden_gem;
@@ -183,8 +170,27 @@ export default function NepalMap({ onHeritageClick, selectedMonth, onMonthChange
 
       {/* Crowd detail chart */}
       {crowdDetail && selectedDest && (
-        <div className="border-t border-white/5">
-          <CrowdChart data={crowdDetail.monthly_trend} destName={crowdDetail.name} />
+        <div className="border-t border-white/5 bg-gray-950/95">
+          <div className="flex items-center justify-between px-4 py-2 border-b border-white/5">
+            <span className="text-xs font-semibold text-gray-300">
+              Crowd insights for {crowdDetail.name}
+            </span>
+            <button
+              onClick={() => {
+                setCrowdDetail(null);
+                setSelectedDest(null);
+              }}
+              className="p-1 rounded-md hover:bg-white/10 text-gray-400 hover:text-gray-200 transition-colors"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+          <CrowdChart
+            data={crowdDetail.monthly_trend}
+            destName={crowdDetail.name}
+            recommendation={crowdDetail.recommendation}
+            aiAdvice={crowdDetail.ai_advice}
+          />
         </div>
       )}
     </div>

@@ -1,25 +1,51 @@
 import React, { useState, useCallback } from 'react';
 import axios from 'axios';
 import { MapPin, Sparkles } from 'lucide-react';
+import { useAuth } from './context/AuthContext';
 import Navbar from './components/Navbar';
 import { HeroSection } from './components/ui/hero-section-dark';
 import OnboardingForm from './components/OnboardingForm';
 import NepalMap from './components/NepalMap';
 import ItineraryPanel from './components/ItineraryPanel';
 import HeritagePanel from './components/HeritagePanel';
+import AuthModal from './components/AuthModal';
+import GuideRequestsPanel from './components/GuideRequestsPanel';
 
 const HERITAGE_SITE_IDS = ['PSP', 'BDN', 'PTN', 'SYM', 'LMT'];
 
-export default function App() {
+function App() {
+  const { isAuthenticated, isGuide } = useAuth();
   const [view, setView] = useState('landing');
+  const [theme, setTheme] = useState('dark');
   const [loading, setLoading] = useState(false);
+  const [aiRateLimited, setAiRateLimited] = useState(false);
+  const [rateLimitNotified, setRateLimitNotified] = useState(false);
   const [userProfile, setUserProfile] = useState(null);
   const [itineraryData, setItineraryData] = useState(null);
   const [heritageSite, setHeritageSite] = useState(null);
   const [showHeritage, setShowHeritage] = useState(false);
   const [selectedMonth, setSelectedMonth] = useState('Oct');
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [authInitialMode, setAuthInitialMode] = useState('login');
+  const [showRequestsPanel, setShowRequestsPanel] = useState(false);
+  const [requestsPanelShowCreateForm, setRequestsPanelShowCreateForm] = useState(false);
+  const [requestsPanelInitialFormData, setRequestsPanelInitialFormData] = useState(null);
+
+  // If the user logs out while panels/modals are open, close request panel to avoid 401 spam.
+  React.useEffect(() => {
+    if (!isAuthenticated) {
+      setShowRequestsPanel(false);
+      setRequestsPanelShowCreateForm(false);
+      setRequestsPanelInitialFormData(null);
+    }
+  }, [isAuthenticated]);
 
   const fetchItinerary = useCallback(async (profile) => {
+    if (!isAuthenticated) {
+      setAuthInitialMode('login');
+      setShowAuthModal(true);
+      return;
+    }
     setLoading(true);
     try {
       const res = await axios.post('/api/itinerary', profile);
@@ -27,24 +53,53 @@ export default function App() {
       setView('dashboard');
     } catch (err) {
       console.error('Failed to fetch itinerary:', err);
+      if (err.response && err.response.status === 401) {
+        setAuthInitialMode('login');
+        setShowAuthModal(true);
+        return;
+      }
       if (err.response && err.response.status === 429) {
-        alert('Rate limit reached. Please wait a moment and try again.');
+        setAiRateLimited(true);
+        if (!rateLimitNotified) {
+          alert('Rate limit reached. Please wait about a minute before generating another itinerary.');
+          setRateLimitNotified(true);
+        }
+        // Soft cooldown: re-enable after 60 seconds so the user can try again later
+        setTimeout(() => {
+          setAiRateLimited(false);
+        }, 60000);
       } else {
         alert('Failed to generate itinerary. Please make sure the backend is running on port 5000.');
       }
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [isAuthenticated, rateLimitNotified]);
 
   const handleFormSubmit = (form) => {
+    if (!isAuthenticated) {
+      setAuthInitialMode('login');
+      setShowAuthModal(true);
+      return;
+    }
     setUserProfile(form);
     setSelectedMonth(form.travel_month || 'Oct');
+    // When user (re)generates a trip, focus the itinerary view
+    setShowHeritage(false);
+    setHeritageSite(null);
     fetchItinerary(form);
   };
 
   const handleRegenerate = () => {
     if (userProfile) {
+      if (!isAuthenticated) {
+        setAuthInitialMode('login');
+        setShowAuthModal(true);
+        return;
+      }
+      // Regenerating should also focus on the itinerary, not a previously opened heritage card
+      setShowHeritage(false);
+      setHeritageSite(null);
       fetchItinerary(userProfile);
     }
   };
@@ -58,7 +113,14 @@ export default function App() {
     } catch (err) {
       console.error('Failed to fetch heritage site:', err);
       if (err.response && err.response.status === 429) {
-        alert('Rate limit reached. Please wait a moment and try again.');
+        setAiRateLimited(true);
+        if (!rateLimitNotified) {
+          alert('Rate limit reached. Please wait about a minute before requesting more AI-powered stories.');
+          setRateLimitNotified(true);
+        }
+        setTimeout(() => {
+          setAiRateLimited(false);
+        }, 60000);
       }
     }
   };
@@ -68,29 +130,85 @@ export default function App() {
     setHeritageSite(null);
   };
 
+  const handleToggleTheme = () => {
+    setTheme((prev) => {
+      const next = prev === 'dark' ? 'light' : 'dark';
+      if (typeof document !== 'undefined') {
+        document.documentElement.classList.toggle('dark', next === 'dark');
+      }
+      return next;
+    });
+  };
+
   const handleNavigate = (target) => {
     if (target === 'landing') {
       setView('landing');
+      setShowHeritage(false);
+      setHeritageSite(null);
     } else if (target === 'onboarding') {
       setView('onboarding');
+      setShowHeritage(false);
+      setHeritageSite(null);
     } else if (target === 'dashboard') {
       setShowHeritage(false);
       setView('dashboard');
-    } else if (target === 'heritage') {
-      setView('dashboard');
+    } else if (target === 'guide-requests' || target === 'my-requests') {
+      setView('requests');
     }
+  };
+
+  const openRequestsList = () => {
+    if (!isAuthenticated) {
+      setAuthInitialMode('login');
+      setShowAuthModal(true);
+      return;
+    }
+    setRequestsPanelShowCreateForm(false);
+    setRequestsPanelInitialFormData(null);
+    setShowRequestsPanel(true);
+  };
+
+  const openRequestsCreateFromDay = (day) => {
+    if (!isAuthenticated) {
+      setAuthInitialMode('login');
+      setShowAuthModal(true);
+      return;
+    }
+    const message = [
+      `I'm interested in connecting with a local guide for Day ${day?.day}: ${day?.title}`,
+      day?.morning ? `Morning: ${day.morning}` : null,
+      day?.afternoon ? `Afternoon: ${day.afternoon}` : null,
+      day?.evening ? `Evening: ${day.evening}` : null,
+      day?.transport ? `Transport: ${day.transport}` : null,
+      day?.cost_usd != null ? `Approx. budget: $${day.cost_usd} USD` : null,
+    ].filter(Boolean).join('\n\n');
+
+    setRequestsPanelShowCreateForm(true);
+    setRequestsPanelInitialFormData({
+      tripTitle: day?.title || 'Trip request',
+      message,
+    });
+    setShowRequestsPanel(true);
   };
 
   const navProps = {
     onLogoClick: () => setView('landing'),
     currentView: view,
     onNavigate: handleNavigate,
+    theme,
+    onToggleTheme: handleToggleTheme,
+    onOpenAuth: (mode = 'login') => {
+      setAuthInitialMode(mode);
+      setShowAuthModal(true);
+    },
+    // Dropdown "My Requests" should show only the list (no create form)
+    onOpenRequests: openRequestsList,
   };
 
   // Landing page
   if (view === 'landing') {
     return (
-      <div className="min-h-screen bg-gray-950 flex flex-col">
+      <div className={theme === 'dark' ? 'min-h-screen bg-gray-950 flex flex-col' : 'min-h-screen bg-slate-50 flex flex-col'}>
         <Navbar {...navProps} />
         <HeroSection
           title="Powered by GPT-5.4 + ML"
@@ -137,6 +255,20 @@ export default function App() {
             ))}
           </div>
         </div>
+
+        {/* Auth Modal & Guide Requests available on landing view */}
+        <AuthModal
+          isOpen={showAuthModal}
+          onClose={() => setShowAuthModal(false)}
+          initialMode={authInitialMode}
+        />
+        <GuideRequestsPanel
+          isOpen={showRequestsPanel}
+          onClose={() => setShowRequestsPanel(false)}
+          preferredDestinations={itineraryData?.destinations_used || []}
+          showCreateForm={requestsPanelShowCreateForm}
+          initialFormData={requestsPanelInitialFormData}
+        />
       </div>
     );
   }
@@ -144,9 +276,23 @@ export default function App() {
   // Onboarding form
   if (view === 'onboarding') {
     return (
-      <div className="min-h-screen bg-gray-950 flex flex-col">
+      <div className={theme === 'dark' ? 'min-h-screen bg-gray-950 flex flex-col' : 'min-h-screen bg-slate-50 flex flex-col'}>
         <Navbar {...navProps} />
-        <OnboardingForm onSubmit={handleFormSubmit} loading={loading} />
+        <OnboardingForm onSubmit={handleFormSubmit} loading={loading} aiRateLimited={aiRateLimited} theme={theme} />
+
+        {/* Auth Modal & Guide Requests available on onboarding view */}
+        <AuthModal
+          isOpen={showAuthModal}
+          onClose={() => setShowAuthModal(false)}
+          initialMode={authInitialMode}
+        />
+        <GuideRequestsPanel
+          isOpen={showRequestsPanel}
+          onClose={() => setShowRequestsPanel(false)}
+          preferredDestinations={itineraryData?.destinations_used || []}
+          showCreateForm={requestsPanelShowCreateForm}
+          initialFormData={requestsPanelInitialFormData}
+        />
       </div>
     );
   }
@@ -154,7 +300,7 @@ export default function App() {
   // Loading state
   if (view === 'dashboard' && loading) {
     return (
-      <div className="min-h-screen bg-gray-950 flex flex-col">
+      <div className={theme === 'dark' ? 'min-h-screen bg-gray-950 flex flex-col' : 'min-h-screen bg-slate-50 flex flex-col'}>
         <Navbar {...navProps} />
         <div className="flex-1 flex items-center justify-center">
           <div className="text-center">
@@ -163,17 +309,31 @@ export default function App() {
             <p className="text-gray-600 text-sm mt-1">GPT-5.4 + Random Forest working together</p>
           </div>
         </div>
+
+        {/* Auth Modal & Guide Requests available while loading dashboard */}
+        <AuthModal
+          isOpen={showAuthModal}
+          onClose={() => setShowAuthModal(false)}
+          initialMode={authInitialMode}
+        />
+        <GuideRequestsPanel
+          isOpen={showRequestsPanel}
+          onClose={() => setShowRequestsPanel(false)}
+          preferredDestinations={itineraryData?.destinations_used || []}
+          showCreateForm={requestsPanelShowCreateForm}
+          initialFormData={requestsPanelInitialFormData}
+        />
       </div>
     );
   }
 
   // Dashboard
   return (
-    <div className="h-screen flex flex-col bg-gray-950">
+    <div className={theme === 'dark' ? 'h-screen flex flex-col bg-gray-950 overflow-hidden' : 'h-screen flex flex-col bg-slate-50 overflow-hidden'}>
       <Navbar {...navProps} />
-      <div className="flex-1 flex overflow-hidden">
-        {/* Map — left 60% */}
-        <div className="w-[60%] h-full border-r border-white/5">
+      <div className="flex flex-1 overflow-hidden">
+        {/* Map — left 60% - fixed, no scroll */}
+        <div className="w-[60%] h-full border-r border-white/5 overflow-hidden">
           <NepalMap
             onHeritageClick={handleHeritageClick}
             selectedMonth={selectedMonth}
@@ -182,10 +342,10 @@ export default function App() {
           />
         </div>
 
-        {/* Right panel — 40% */}
-        <div className="w-[40%] h-full overflow-hidden">
+        {/* Right panel — 40% - scrollable independently */}
+        <div className="w-[40%] h-full overflow-y-auto">
           {showHeritage && heritageSite ? (
-            <HeritagePanel site={heritageSite} onClose={handleCloseHeritage} />
+            <HeritagePanel site={heritageSite} onClose={handleCloseHeritage} theme={theme} />
           ) : itineraryData ? (
             <ItineraryPanel
               itinerary={itineraryData?.itinerary || []}
@@ -198,6 +358,8 @@ export default function App() {
               aiEnhanced={itineraryData?.ai_enhanced}
               onRegenerate={handleRegenerate}
               loading={loading}
+              aiRateLimited={aiRateLimited}
+              onConnectGuide={openRequestsCreateFromDay}
             />
           ) : (
             <div className="h-full flex flex-col items-center justify-center p-8 text-center">
@@ -220,6 +382,24 @@ export default function App() {
           )}
         </div>
       </div>
+
+      {/* Auth Modal */}
+      <AuthModal
+        isOpen={showAuthModal}
+        onClose={() => setShowAuthModal(false)}
+        initialMode={authInitialMode}
+      />
+
+      {/* Guide Requests Panel */}
+      <GuideRequestsPanel
+        isOpen={showRequestsPanel}
+        onClose={() => setShowRequestsPanel(false)}
+        preferredDestinations={itineraryData?.destinations_used || []}
+        showCreateForm={requestsPanelShowCreateForm}
+        initialFormData={requestsPanelInitialFormData}
+      />
     </div>
   );
 }
+
+export default App;

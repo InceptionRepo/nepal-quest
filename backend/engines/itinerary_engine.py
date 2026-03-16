@@ -254,7 +254,13 @@ def get_ml_confidence(user_profile, selected_dest_ids):
 
 
 def ai_enhance_itinerary(result, user_profile):
-    """Use GPT to generate richer, personalized day descriptions."""
+    """Use GPT to generate richer, personalized day descriptions.
+
+    This function is intentionally best-effort:
+    - If the AI client is not configured or rate-limited, we gracefully fall back
+      to a non-AI itinerary while clearly indicating that AI enhancements are
+      unavailable.
+    """
     dest_names = [destinations_by_id[d]['name'] for d in result['destinations_used'] if d in destinations_by_id]
     interests = ', '.join(user_profile['interests'])
     month = user_profile.get('travel_month', 'October')
@@ -300,10 +306,18 @@ Generate a personalized trip summary and 3 insider tips for this Nepal itinerary
             result['ai_enhanced'] = True
             set_cached_ai_response(cache_key, json.dumps(ai_data))
         except (json.JSONDecodeError, KeyError):
+            # If the model responds but not as JSON, still surface it as a helpful note.
             result['ai_summary'] = ai_response
             result['ai_tips'] = []
             result['ai_enhanced'] = True
     else:
+        # Graceful degradation when AI is disabled or rate-limited.
+        # The core itinerary is still fully usable and ML-powered.
+        result.setdefault(
+            'ai_summary',
+            'Showing a smart, ML-powered itinerary. AI narrative enhancements are temporarily unavailable (no API key or rate limit reached).',
+        )
+        result.setdefault('ai_tips', [])
         result['ai_enhanced'] = False
 
     return result
@@ -333,5 +347,9 @@ def generate_itinerary(user_profile):
     result['destination_details'] = dest_details
 
     result = ai_enhance_itinerary(result, user_profile)
+
+    # Explicit flag so the frontend can explain to users that this is an
+    # AI-assisted itinerary even when the language model is offline.
+    result['is_ml_recommended'] = True
 
     return result

@@ -24,14 +24,30 @@ function CustomTooltip({ active, payload, label }) {
   );
 }
 
-export default function CrowdChart({ data, destName }) {
+export default function CrowdChart({ data, destName, recommendation, aiAdvice }) {
   if (!data || data.length === 0) return null;
 
   return (
     <div className="bg-gray-900 rounded-xl border border-white/5 p-4">
-      <h3 className="text-sm font-semibold text-gray-200 mb-3">
+      <h3 className="text-sm font-semibold text-gray-200 mb-1.5">
         Crowd Trend — {destName || 'Destination'}
       </h3>
+      {(recommendation || aiAdvice) && (
+        <div className="mb-3 text-[11px] text-gray-300 space-y-1">
+          {recommendation && (
+            <p className="leading-snug">
+              <span className="font-semibold text-gray-400">ML insight: </span>
+              {recommendation}
+            </p>
+          )}
+          {aiAdvice && (
+            <p className="leading-snug">
+              <span className="font-semibold text-purple-300">AI advice: </span>
+              {aiAdvice}
+            </p>
+          )}
+        </div>
+      )}
       <ResponsiveContainer width="100%" height={180}>
         <BarChart data={data} margin={{ top: 5, right: 5, left: -20, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="#1f2937" />
